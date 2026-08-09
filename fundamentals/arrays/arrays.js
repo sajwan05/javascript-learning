@@ -126,8 +126,8 @@
 
 {
     // not recommended
-    let fruits = [];
-    fruits[999] = 5;
+    let fruits = ["Apple", "Banana"];
+    // fruits[999] = 5;
     console.log(fruits);
 
     fruits.age = 27;
@@ -137,7 +137,33 @@
 
     console.log(fruits.at(-1));
 
+    for(const fruit of fruits){
+        console.log(fruit);
+    }
+
+    for(const key in fruits){
+        console.log(fruits[key]);
+    }
+
     // not recommended
 }
 // push pop faster shift unshift slow(because of reindexing)
+
+// Iterating through the array
+
+{
+    let fruits = ["Apple", "Orange", "Pear"];
+
+    for(let i = 0; i < fruits.length; i++){
+        console.log(fruits[i]);
+    }
+
+    for(const fruit of fruits){
+        console.log(fruit);
+    }
+
+    for(let key in fruits){
+        console.log(fruits[key]);
+    } //this one is not recommended suitable for objects
+}
 
