@@ -167,3 +167,47 @@
     } //this one is not recommended suitable for objects
 }
 
+{
+    const fruits = [];
+    fruits[123] = "Apple";
+
+    console.log(fruits);
+    console.log(fruits.length);
+}
+
+{
+    let fruits = ["Apple", "Orange", "Pear"];
+
+    fruits.push("Lemon", "plum");
+    console.log(fruits);
+    fruits.length = 3;
+    console.log(fruits);
+
+    fruits.length = 8;
+    console.log(fruits);
+
+    fruits.length = 0;
+
+    console.log(fruits);
+}
+
+// constructor method
+
+{
+    const arr = new Array("Apple", "Plum", "Orange");
+
+    console.log(arr);
+}
+
+// Multidimensional arrays
+
+{
+    let matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+    ];
+
+    console.log(matrix[1][1]);
+}
+
