@@ -65,3 +65,45 @@
     console.log(fruits.at(2));
     console.log(fruits.at(-1));
 }
+
+// methods
+
+// method that work with the end of the array:
+
+{
+    let fruits = ["Apple", "Orange", "Pear"];
+    console.log(fruits);
+
+    const poppedElement = fruits.pop();
+    console.log(poppedElement);
+    console.log(fruits);
+
+    // push
+
+    const pushReturns = fruits.push(poppedElement);
+
+    console.log(fruits);
+    console.log(pushReturns);
+}
+
+// methods that work at the beginning of an array
+// shift and unshift
+
+{
+    let fruits = ["Apple", "Orange", "Pear"];
+
+    console.log(fruits);
+    console.log(fruits.shift());
+
+    console.log(fruits);
+
+    console.log(fruits.unshift("Tomato"));
+    console.log(fruits);
+
+    // method push and unshift can add multiple elements at once:
+
+    fruits.push("Lemon", "Mango");
+    fruits.unshift("Banana", "Ananas");
+
+    console.log(fruits);
+}
