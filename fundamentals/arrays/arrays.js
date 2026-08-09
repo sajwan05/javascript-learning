@@ -107,3 +107,37 @@
 
     console.log(fruits);
 }
+
+{
+    let fruits = ["Banana"];
+
+    let arr = fruits;
+
+    console.log(fruits === arr);
+
+    fruits.push("Apple");
+    arr.unshift("Lemon");
+
+    console.log(fruits === arr);
+
+    console.log(arr);
+    console.log(fruits);
+}
+
+{
+    // not recommended
+    let fruits = [];
+    fruits[999] = 5;
+    console.log(fruits);
+
+    fruits.age = 27;
+    console.log(fruits);
+
+    console.log(typeof fruits.at(-1));
+
+    console.log(fruits.at(-1));
+
+    // not recommended
+}
+// push pop faster shift unshift slow(because of reindexing)
+
