@@ -57,4 +57,11 @@
     console.log(fruits[lengthOfFruitsArray - 1]);
 
     console.log(fruits.at(-1));
+
+    // 2nd element using at 
+
+    console.log(fruits.at(0));
+    console.log(fruits.at(1));
+    console.log(fruits.at(2));
+    console.log(fruits.at(-1));
 }
