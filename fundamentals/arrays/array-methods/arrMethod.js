@@ -66,3 +66,24 @@
 
     console.log(numbers);
 }
+
+// slice 
+
+// syntax: arr.slice([start], [end]);
+
+{
+    let vowels = ["a", "e", "i", "o", "u"];
+
+    console.log(vowels.slice(1, 3));
+    console.log(vowels);
+    console.log(vowels.slice(-2));
+}
+// To create copy of an array
+
+{
+    let arr = ["t", "e", "s", "t"];
+
+    let array = arr.slice();
+
+    console.log(array);
+}
