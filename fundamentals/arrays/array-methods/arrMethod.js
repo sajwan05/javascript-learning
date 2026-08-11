@@ -298,4 +298,87 @@
         console.log(firstTwoUsers);
     }
 
+//4. Transform an array
+
+// map
+
+{
+    // syntax: 
+    const arr = ["hey"];
+    let result = arr.map((item, index,array) =>{
+        // returns the new value instead of items
+    })
+
+    const users = ["Bilbo", "Gandalf", "Nazgul"];
+
+    // trandform each element into its length
+
+    const eachUsersLength = users.map(item => item.length);
+
+    console.log(users);
+    console.log(eachUsersLength);
+}
+
+// sort(fn)- sorts arr in place
+
+{
+    const numbers = [1, 2, 15];
+    console.log(numbers);
+
+    numbers.sort();
+
+    console.log(numbers);
+
+    const number = [1, 0, -1];
+
+    console.log(number.sort());
+}
+
+{
+    function compare(a, b){
+        if (a > b) return 1;
+        if (a == b) return 0;
+        if (a < b) return -1;
+    }
+
+    function compareNumeric(a, b) {
+        if ( a > b) return 1;
+        if ( a == b) return 0;
+        if ( a < b) return -1;
+    }
+
+
+    const numbers = [1, 2, 15];
+
+    numbers.sort(compareNumeric);
+
+    console.log(numbers);
+}
+
+{
+    const numbers = [1, -2, 15, 0, 8];
+    console.log(numbers);
+    numbers.sort((a, b) => {
+        console.log(a + "<>" + b);
+        return a - b;
+    });
+
+    const array = [1, 2, 15];
+
+    array.sort((a, b) => a - b);
+
+    console.log(array);
+
+}
+
+{
+    let countries = ['Österreich', 'Andorra', 'Vietnam'];
+    console.log(countries);
+
+
+    console.log(countries.sort((a, b) => a > b ? 1 : -1));
+
+    console.log(countries.sort((a, b) => a.localeCompare(b)));
+}
+
 
