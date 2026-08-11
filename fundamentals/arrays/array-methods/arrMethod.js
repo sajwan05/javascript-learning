@@ -264,3 +264,38 @@
 
         console.log(lastUserIndex);
     }
+
+
+    //filter---find method looks for a single(first) element that makes the function return true.
+    // if there are many we can use arr.filter(fn)
+
+    {
+        // syntax
+        const arr = [1, 2, 3];
+        let results = arr.filter((item, index, array) => {
+            // if true item is pushed to results and the iteration continues
+            //returns empty array if nothing found
+        });
+
+
+        let users = [
+            {id: 1, name: "John"},
+            {id: 2, name: "Pete"},
+            {id: 3, name: "Mary"}
+        ];
+
+        // returns array of first two users
+
+        let firstTwoUser = users.filter((item, index) => {
+            return item.id === 1 || item.id === 2
+        });
+
+        console.log(users);
+        console.log(firstTwoUser);
+
+        const firstTwoUsers = users.filter(element => element.id < 3);
+
+        console.log(firstTwoUsers);
+    }
+
+
