@@ -163,3 +163,19 @@
     console.log(array.concat(arrayLike));
 }
 
+// Iterate: forEach
+// Syntax: arr.forEach(function (item, index, array){
+// ...do something with an item
+// })
+
+{
+    const names = ["Suraj", "Tiwari", "Khanduri"];
+
+    names.forEach(name => console.log(`My friends name is ${name}`));
+
+    names.forEach(console.log);
+
+    names.forEach((name, index, array) => {
+        console.log(`${name} is at index ${index} in array ${array}`);
+    });
+}
