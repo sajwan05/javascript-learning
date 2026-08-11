@@ -163,7 +163,7 @@
     console.log(array.concat(arrayLike));
 }
 
-// Iterate: forEach
+//2. Iterate: forEach
 // Syntax: arr.forEach(function (item, index, array){
 // ...do something with an item
 // })
@@ -179,3 +179,88 @@
         console.log(`${name} is at index ${index} in array ${array}`);
     });
 }
+
+// 3. Searching in array 
+    // indexOf/lastIndexOf and includes
+    // array.indexOf(item, from)--- looks for item starting from index from, and returns the index where it was found, otherwise -1.
+
+    // array.includes(item, from ) -- looks for item starting from index from, returns true if found
+
+    {
+        const arr = [1, 0, false];
+
+        console.log(arr.indexOf(0));
+        console.log(arr.indexOf(false));
+        console.log(arr.indexOf(null));
+
+        console.log(arr.includes(1));
+        console.log(arr.includes("suraj"));
+    }
+
+    {
+        const fruits = ["Apple", "Orange", "Apple"];
+
+        console.log(fruits.indexOf("Apple"));
+        console.log(fruits.indexOf("Papaya"));
+
+        console.log(fruits.lastIndexOf("Apple"));
+    }
+
+    // arr.includes method handle NaN correctly
+
+    {
+        const fruits = ["Apple", "Lemon", "Orange", NaN];
+
+        console.log(fruits.indexOf(NaN));
+        console.log(fruits.includes(NaN));
+    }
+
+    // find and findIndex/findLastIndex
+
+    /*
+        Syntax: let result = arr.find(item, index, arr => {
+            //if true is returned, item is returned and iteration is stopped
+            // for falsy scenario returns undefined
+            })
+    */
+
+    {
+        let users = [
+            {id: 1, name: "John"},
+            {id: 2, name: "Pete"},
+            {id: 3, name: "Mary"}
+        ];
+
+        let user = users.find(element => element.id === 1);
+
+        console.log(users);
+        console.log(user);
+
+        let userWithName = users.find(item => item.name === "Mary");
+
+        console.log(userWithName);
+        console.log(user.id);
+        console.log(user.name);
+        console.log(userWithName.name);
+        console.log(userWithName.id);
+    }
+
+    {
+        let users = [
+            {id: 1, name: "John"},
+            {id: 2, name: "Pete"},
+            {id: 3, name: "Mary"},
+            {id: 4, name: "John"},
+        ];
+
+        // find the index of first John
+
+        let firstUserIndex = users.findIndex(item => item.name === "John");
+        console.log(firstUserIndex);
+
+        // Find the indexof last john
+
+        let lastUserIndex = users.findLastIndex(user => user.name === "John");
+
+        console.log(lastUserIndex);
+    }
