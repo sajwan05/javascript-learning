@@ -1,3 +1,4 @@
+"use strict";
 // Array methods
 // Add remove items
 
@@ -119,5 +120,46 @@
     length: 1
     };
 
-    alert( arr.concat(arrayLike) );
+    console.log( arr.concat(arrayLike) );
 }
+
+{
+    const arr = [1, 2];
+
+    let arrayLike = {
+        0: "something", 
+        length: 1,
+    };
+
+    console.log(arr.concat(arrayLike));
+
+    let contacts = {
+        suraj: 973,
+        adarshTheAvoidantCreature: 567,
+        khanduriTheOffMan: 3438,
+        bagwariTheBakuMan: 3435,
+        tiwariTheGenuineGuy: 3435,
+        gauravRawatNotSoGenuineGuy: 345,
+    }
+
+    console.log(arr);
+    const array2 = arr.concat(arrayLike);
+    console.log(array2);
+
+    const array3 = array2.concat(contacts);
+    console.log(array3);
+}
+
+{
+    const array = [1, 2];
+
+    const arrayLike = {
+        0: "something",
+        1: "else", 
+        [Symbol.isConcatSpreadable] : true, 
+        length: 2,
+    };
+
+    console.log(array.concat(arrayLike));
+}
+
