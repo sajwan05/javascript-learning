@@ -87,3 +87,27 @@
 
     console.log(array);
 }
+
+// Concat 
+// arr.concat
+
+// arr.concat(arg1, arg2...);
+
+{
+    let arr = [1, 2];
+
+    // create an array from: arr and [3, 4]
+    const array = [3, 4];
+
+    // console.log(arr.concat(array));
+
+    const array2 = arr.concat(array);
+
+    const array3 = array2.concat([5, 6], 7, 8);
+
+    console.log(arr);
+    console.log(array);
+    console.log(array2);
+    console.log(array3);
+}
+
