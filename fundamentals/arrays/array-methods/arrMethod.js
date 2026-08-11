@@ -111,3 +111,13 @@
     console.log(array3);
 }
 
+{
+    let arr = [1, 2];
+
+    let arrayLike = {
+    0: "something",
+    length: 1
+    };
+
+    alert( arr.concat(arrayLike) );
+}
