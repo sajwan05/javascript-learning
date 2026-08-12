@@ -440,3 +440,38 @@
     console.log(arr);
 }
 
+// split and join
+
+{
+    let names = 'Bilbo, Gandalf, Nazgul';
+
+    const array = names.split(", ");
+
+    console.log(names);
+    console.log(array);
+
+    for(let name of array){
+        console.log(`A message to ${name}`);
+    }
+
+}
+
+{
+    let arr = 'Bilbo, Gandalf, Nazgul, Saruman'.split(", ", 2);
+    console.log(arr);
+}
+
+{
+    const str = "test";
+
+    console.log(str.split(""));
+}
+
+// arr.join(glue)
+
+{
+    const arr = ['Bilbo', 'Gandalf', 'Nazgul'];
+    let str = arr.join(";");
+
+    console.log(str);
+}
