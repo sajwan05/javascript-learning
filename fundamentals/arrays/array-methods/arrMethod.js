@@ -431,3 +431,12 @@
     console.log(countries.sort((a, b) => a.localeCompare(b)));
 }
 
+// reverse
+
+{
+    const arr = [1, 2, 3, 4, 5, 6];
+    arr.reverse();
+
+    console.log(arr);
+}
+
