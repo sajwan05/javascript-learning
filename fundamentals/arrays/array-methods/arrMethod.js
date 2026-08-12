@@ -381,4 +381,53 @@
     console.log(countries.sort((a, b) => a.localeCompare(b)));
 }
 
+// sort (fn)
+
+{
+    const array = [1, 2, 15];
+
+    array.sort();
+
+    console.log(array);
+}
+
+{
+    function compare(a, b){
+        if (a > b) return 1;
+        if(a == b) return 0;
+        if(a < b) return -1;
+    }
+}
+
+{
+    function compareNumeric(a, b) {
+        if(a > b) return 1;
+        if(a == b) return 0;
+        if(a < b) return -1;
+    }
+
+    const arr = [1, 2, 15];
+
+    arr.sort(compareNumeric);
+
+    console.log(arr);
+}
+
+{
+    const array = [1, 2, 15];
+
+    array.sort((a,b) => {
+        return a - b;
+    });
+
+    console.log(array);
+}
+
+{
+    let countries = ['Österreich', 'Andorra', 'Vietnam'];
+
+    console.log(countries.sort((a, b) => a - b));
+
+    console.log(countries.sort((a, b) => a.localeCompare(b)));
+}
 
