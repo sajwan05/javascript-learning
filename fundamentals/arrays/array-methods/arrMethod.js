@@ -557,3 +557,50 @@
     const sumOfNumbers = numbers.reduce((total, current) => total + current);
     console.log(sumOfNumbers);
 }
+
+// Array.isArray
+
+{
+    console.log(typeof 1);
+    console.log(typeof "1");
+    console.log(typeof true);
+    console.log(typeof undefined);
+    console.log(typeof []);
+    console.log(typeof {});
+
+
+}
+
+{
+    console.log(Array.isArray({}));
+    console.log(Array.isArray([]));
+}
+
+// Most method support "thisArg";
+
+{
+    const army = {
+        minAge : 18, 
+        maxAge : 27, 
+
+        canJoin(candidate){
+            return candidate.age >= this.minAge && this.maxAge
+        }
+    }
+
+    const users = [
+        {age: 16},
+        {age: 20}, 
+        {age: 23},
+        {age: 30},
+    ];
+
+    let soldiers = users.filter(army.canJoin, army);
+
+    console.log(army);
+    console.log(users);
+    console.log(soldiers);
+    console.log(soldiers.length);
+    console.log(soldiers[0].age);
+    console.log(soldiers[1].age);
+}
