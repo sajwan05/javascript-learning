@@ -475,3 +475,62 @@
 
     console.log(str);
 }
+
+// reverse
+
+{
+    const numbers = [1, 2, 3, 4, 5];
+    console.log(numbers);
+    numbers.reverse();
+
+    console.log(numbers);
+}
+
+// split and join
+
+{
+    const names = "Bilbo, Gandalf, Nazgul";
+    const arrayOfNames = names.split(", ");
+
+    console.log(arrayOfNames);
+
+    for(const name of arrayOfNames){
+        console.log(`A message to ${name}`);
+    }
+}
+
+{
+    const messageTo = "Khanduri, Tiwari, Prashant, Kaushik, Mohit";
+
+    const arrayOfNames = messageTo.split(", ");
+
+    for(const message of arrayOfNames){
+        console.log(`A message to ${message}`);
+    }
+
+    const arrayAfterLimit = messageTo.split(", ", 3);
+
+    console.log(arrayAfterLimit);
+}
+
+{
+    // split into letters
+
+    const word = "test";
+
+    const characterArray = word.split("");
+    console.log(characterArray);
+}
+
+// arr.join
+{
+    const names = ["Khanduri", "Tiwari", "Adarsh", "Ankush", "Tejas"];
+    console.log(names);
+
+    const stringNames = names.join();
+    console.log(stringNames);
+
+    const stringNames1 = names.join(" ");
+    console.log(stringNames1);
+    
+}
