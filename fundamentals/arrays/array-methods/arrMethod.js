@@ -534,3 +534,26 @@
     console.log(stringNames1);
     
 }
+
+// reduce/reduceRight
+
+/*
+    Syntax: 
+
+    let value = arr.reduce(function(accumulator, item, index, array){
+    }, [initial]);
+*/
+
+{
+    const numbers = [1, 2, 3, 4, 5];
+
+    const result = numbers.reduce((sum, current) => sum + current , 0);
+    console.log(result);
+}
+
+{
+    const numbers = [1, 2, 3, 4, 5];
+
+    const sumOfNumbers = numbers.reduce((total, current) => total + current);
+    console.log(sumOfNumbers);
+}
