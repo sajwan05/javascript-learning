@@ -797,3 +797,18 @@
 
     f("a", "b");
 }
+
+// Create an array
+
+{
+    const fruits = ["Apple", "Banana"];
+    console.log(fruits);
+    console.log(fruits.length);
+
+    const fruits2 = new Array("Apple", "Banana", "Mango");
+    console.log(fruits2);
+
+    const fruits3 = "Apple, Banana".split(", ");
+
+    console.log(fruits3);
+}
