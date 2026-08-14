@@ -984,3 +984,23 @@
     console.log(removedItems);
     console.log(fruits);
 }
+
+// Iterate over an array
+
+{
+    const fruits = ["Apple", "Mango", "Cherry"];
+
+    for(const fruit of fruits){
+        console.log(fruit);
+    }
+}
+
+// Call a function on each element in an array
+
+{
+    const fruits = ["Apple", "Mango", "Cherry"];
+
+    fruits.forEach((fruit, index) => {
+        console.log(`${index}: ${fruit}`);
+    })
+}
