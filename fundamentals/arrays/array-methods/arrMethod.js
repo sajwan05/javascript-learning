@@ -1004,3 +1004,51 @@
         console.log(`${index}: ${fruit}`);
     })
 }
+
+// Merge multiple arrays together
+
+{
+    const fruits = ["Apple", "Banana", "Strawberry"];
+    const moreFruits = ["Mango", "Cherry"];
+
+    const combinedFruits = fruits.concat(moreFruits);
+
+    console.log(fruits);
+    console.log(moreFruits);
+    console.log(combinedFruits);
+}
+
+// Copy an array
+
+{
+    const fruits = ["Strawberry", "Mango"];
+
+    const fruitsCopy = [...fruits];
+    console.log(fruits);
+    console.log(fruitsCopy);
+
+    fruitsCopy[2] = "Apple";
+
+    console.log(fruits);
+    console.log(fruitsCopy);
+
+    const fruitsCopy2 = Array.from(fruits);
+    console.log(fruitsCopy2);
+
+    const fruitsCopy3 = fruits.slice();
+
+    console.log(fruitsCopy3);
+
+    const fruitsCopy4 = fruits.concat();
+
+    console.log(fruitsCopy4);
+
+    const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
+
+    console.log(fruitsDeepCopy);
+
+    fruitsDeepCopy[2] = "Banana";
+
+    console.log(fruitsDeepCopy);
+    console.log(fruits);
+}
