@@ -658,3 +658,46 @@
     console.log(fruits.length);
 }
 
+// Array methods and empty slots
+
+{
+    const colors = ["red", "yellow", "blue"];
+    colors[5] = "purple";
+
+    colors.forEach((element, index) => {
+        console.log(`${index}: ${element}`);
+    })
+
+    console.log(colors.filter(element => element));
+
+    console.log(colors.reverse());
+
+    console.log(colors.concat("yellow", "red"));
+    console.log(colors.reverse());
+
+
+}
+
+{
+    const colors = ["red", "yellow", "blue"];
+
+    colors[5] = "purple";
+
+    const iterator = colors.keys();
+
+    console.log(colors);
+    console.log(iterator);
+
+    for(const key of iterator){
+        console.log(`${key}: ${colors[key]}`);
+    }
+
+    console.log(colors);
+    const newColors = colors.toReversed();
+
+    console.log(newColors);
+
+    const reverseAgainColors = newColors.reverse();
+
+    console.log(reverseAgainColors);
+}
