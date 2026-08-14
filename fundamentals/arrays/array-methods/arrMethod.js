@@ -701,3 +701,45 @@
 
     console.log(reverseAgainColors);
 }
+
+// Copying methods and mutating methods
+
+{
+    const fruits = ["Mango", "Banana", "Guvava"];
+
+    fruits.shift();
+    console.log(fruits);
+
+    fruits.unshift("Mango");
+
+    console.log(fruits);
+
+    const slicedFruits = fruits.slice(1);
+
+    console.log(fruits);
+    console.log(slicedFruits);
+}
+
+{
+    const numbers = [1, 2, 3, 4];
+    console.log(numbers);
+    numbers.copyWithin(0, 1, 2);
+    console.log(numbers);
+
+}
+
+{
+    const numbers = [1, 2, 3, 4, 5, 6];
+
+    const copyNumbers = numbers.slice();
+    const arr2 = copyNumbers.copyWithin(0, 1, 2);
+
+    console.log(numbers);
+    // console.log(copyNumbers);
+    console.log(arr2);
+
+    const arr3 = [...numbers].copyWithin(0, 1, 2);
+
+    console.log(numbers);
+    console.log(arr3);
+}
