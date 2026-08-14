@@ -1052,3 +1052,18 @@
     console.log(fruitsDeepCopy);
     console.log(fruits);
 }
+
+{
+    const fruits = ["Strawberry", "Mango"];
+
+    const fruitsAlias = fruits;
+
+    console.log(fruits === fruitsAlias);
+
+    fruits.unshift("Apple", "Banana");
+
+    console.log(fruits);
+    console.log(fruitsAlias);
+}
+
+// Creating a two dimensional array:
