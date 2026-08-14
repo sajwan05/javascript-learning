@@ -743,3 +743,57 @@
     console.log(numbers);
     console.log(arr3);
 }
+
+// Iterative methods
+
+{
+    function method(callbackFn, thisArg){
+
+        const length = this.length;
+
+        for (let i = 0; i < length; i ++){
+            if (i in this){
+                const result = callbackFn.call(thisArg, this[i], i, this);
+                // do something with the result maybe return early
+            }
+        }
+    }
+
+
+}
+
+
+// Generic array methods
+
+{
+    const arrayLike = {
+        0: "a", 
+        1: "b", 
+        length : 2,
+    };
+
+    console.log(Array.prototype.join.call(arrayLike, " + "));
+}
+
+// Normalization of the length property
+
+{
+    const a = {length : 0.7};
+    console.log(a);
+
+    Array.prototype.push.call(a);
+
+    console.log(a);
+    console.log(a.length);
+}
+
+// array like objects 
+
+{
+    function f() {
+        console.log(Array.prototype.join.call(arguments, " + "));
+    
+    }
+
+    f("a", "b");
+}
