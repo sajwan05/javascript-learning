@@ -1066,4 +1066,55 @@
     console.log(fruitsAlias);
 }
 
-// Creating a two dimensional array:
+// Creating a two-dimensional array:
+
+{
+    const board = [
+        ["R", "N", "B", "Q", "K", "B", "N", "R"],
+        ["P", "P", "P", "P", "P", "P", "P", "P"],
+        [" ", " ", " ", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " ", " ", " "],
+        [" ", " ", " ", " ", " ", " ", " ", " "],
+        ["p", "p", "p", "p", "p", "p", "p", "p"],
+        ["r", "n", "b", "q", "k", "b", "n", "r"],
+    ]
+
+    console.log(board);
+
+    console.log(`${board.join("\n")}\n\n`);
+
+    board[4][4] = board[6][4];
+
+    board[6][4] = " ";
+
+    console.log(board.join("\n"));
+}
+
+// Using an array to tabulate a set of values
+
+{
+    const values = [];
+
+    for(let x = 0; x < 10; x++){
+        values.push([2 ** x, 2 * x ** 2]);
+    }
+
+    console.log(values);
+}
+
+// Creating an array using the result of a match
+
+{
+    // Match one d followed by one or more b's followed by one d
+    // Remember matched b's and the following d
+    // Ignore case
+
+    const myRe = /d(b+)(d)/i;
+
+    const execResult =  myRe.exec("cdbBdbsbz");
+
+    console.log(execResult.input);
+    console.log(execResult.index);
+    console.log(execResult);
+}
