@@ -604,3 +604,57 @@
     console.log(soldiers[0].age);
     console.log(soldiers[1].age);
 }
+
+{
+    const arr = [1, 2, 3, 4, 5];
+
+    // console.log(arr.0);
+    console.log(arr[arr.length - 1]);
+
+    const years = [20, 22, 23, 24, 25, 26, 27, 28];
+
+    console.log(years[2]);
+    console.log(years["2"]);
+
+    console.log(years[2] == years["02"]);
+}
+
+// Relationship between length and numerical properties
+
+{
+    const fruits = [];
+    console.log(fruits);
+
+    fruits.push("Banana", "Apple", "peach");
+
+    console.log(fruits);
+    console.log(fruits.length);
+
+    fruits[5] = "Mango";
+
+    console.log(fruits[5]);
+
+    console.log(fruits);
+
+    console.log(Object.keys(fruits));
+
+    console.log(fruits["3"]);
+    console.log(fruits[4]);
+
+    console.log(fruits.length);
+
+    fruits.length = 10;
+
+    console.log(fruits);
+    console.log(Object.keys(fruits));
+
+    console.log(fruits.length);
+    console.log(fruits[8]);
+
+    fruits.length = 2;
+
+    console.log(Object.keys(fruits));
+
+    console.log(fruits.length);
+}
+
