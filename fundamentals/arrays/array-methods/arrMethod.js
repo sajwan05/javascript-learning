@@ -812,3 +812,175 @@
 
     console.log(fruits3);
 }
+
+// create string from an array
+
+{
+    const fruits = ["Apple", "Banana"];
+
+    const fruitsString = fruits.join(", ");
+    console.log(fruits);
+    console.log(fruitsString);
+}
+
+// Access an array item by its index
+
+{
+    const fruits = ["Apple", "Banana"];
+
+    console.log(fruits[0]);
+    console.log(fruits[1]);
+    console.log(fruits[fruits.length - 1]);
+
+    console.log(fruits[100]);
+}
+
+// Find index of an item in an array
+
+{
+    const fruits = ["Apple", "Banana"];
+    console.log(fruits.indexOf("Banana"));
+}
+
+{
+    const fruits = ["Apple", "Banana"];
+    const isThereBanana = fruits.includes("Banana"); 
+    const isThereCherry = fruits.includes("Cherry");
+
+    console.log(isThereBanana);
+    console.log(isThereCherry);
+
+    const isThereBan = fruits.indexOf("Banana") !== -1;
+    const isCherry = fruits.indexOf("Cherry") !== -1 ;
+
+    console.log(isThereBan);
+    console.log(isCherry);
+
+    console.log(fruits.indexOf("Banana"));
+}
+
+// Append an element to an array 
+
+{
+    const fruits = ["Apple", "Banana"];
+    const newLength = fruits.push("Orange");
+    console.log(fruits);
+
+    console.log(newLength);
+}
+
+// Remove the last item from an array
+
+{
+    const fruits = ["Apple", "Banana", "Orange"];
+    const removedItem = fruits.pop();
+    console.log(fruits);
+    
+    console.log(removedItem);
+}
+
+// Remove multiple items from the end of an array
+{
+    const fruits = ["Apple", "Banana", "Strawberry", "Mango", "Cherry"];
+    console.log(fruits);
+
+    const index = -3;
+
+    const removedItems = fruits.splice(index, 3);
+
+    console.log(fruits);
+    console.log(removedItems);
+}
+
+// Truncate an array down to just first N items
+
+{
+    const fruits = ["Apple", "Banana", "Strawberry", "Mango", "Cherry"];
+
+    const index = 2;
+
+    const removedItems = fruits.splice(index);
+
+    console.log(fruits);
+    console.log(removedItems);
+}
+
+// Remove the first item from an array
+
+{
+    const fruits = ["Apple", "Banana"];
+    const removedItem = fruits.shift();
+    console.log(fruits);
+    // ["Banana"]
+    console.log(removedItem);
+}
+
+// Remove multiple items from the beginning of an array
+
+{
+    const fruits = ["Apple", "Strawberry", "Cherry", "Banana", "Mango"];
+
+    const start = 0;
+    const end = 3;
+
+    const removedItems = fruits.splice(start,end);
+
+    console.log(fruits);
+    console.log(removedItems);
+}
+
+// Add a new first item to an array
+
+{
+    const fruits = ["Banana", "Mango"];
+    const newLength = fruits.unshift("Strawberry");
+    console.log(fruits);
+    // ["Strawberry", "Banana", "Mango"]
+    console.log(newLength);
+}
+
+// remove a single item by index
+
+{
+    const fruits = ["Strawberry", "Banana", "Mango"];
+    // let's suppose we have to remove "banana";
+    console.log(fruits);
+
+    const index = fruits.indexOf("Banana");
+    const number = 1;
+
+    const removedItem = fruits.splice(index, number);
+
+    console.log(fruits);
+    console.log(removedItem);
+}
+
+// Remove multiple items by index
+
+{
+    const fruits = ["Apple", "Banana", "Strawberry", "Mango"];
+    console.log(fruits);
+
+    const indexOfBanana = fruits.indexOf("Banana");
+    
+
+    const deleteItems = fruits.splice(indexOfBanana, 1);
+    const indexOfStraw = fruits.indexOf("Strawberry");
+    const delteStrawberrtToo = fruits.splice(indexOfStraw, 1);
+
+    console.log(fruits);
+}
+
+// Replace multiple items in an array
+
+{
+    const fruits = ["Apple", "Banana", "Strawberry"];
+    console.log(fruits);
+    const start = -2;
+    const deleteCount = 2;
+
+    const removedItems = fruits.splice(start, deleteCount, "Lemon", "Tomato");
+
+    console.log(removedItems);
+    console.log(fruits);
+}
