@@ -334,4 +334,46 @@ Pseudocode:
     console.log(sumOfTripledEven);
 }
 
+{
+    function addOne(number){
+        return number + 1;
+    }
+
+    const array = [1, 2, 3, 4, 5];
+    console.log(array);
+
+    const addOneToEachElement = array.map(addOne);
+
+    console.log(addOneToEachElement);
+}
+
+{
+    const array = [1, 2, 3, 4, 5];
+
+    const addOneToArrayItems = array.map((number) => number + 1);
+
+    console.log(addOneToArrayItems);
+}
+
+{
+    function isOdd(number){
+        return number % 2 ;
+    }
+
+    const array = [1, 2, 3, 4, 5];
+
+    const oddNums = array.filter(isOdd);
+
+    console.log(oddNums);
+}
+
+{
+    const array = [1, 2, 3, 4, 5];
+
+    const product = array.reduce((total, eachItem) => total * eachItem, 1);
+
+    console.log(array);
+    console.log(product);
+}
+
 
