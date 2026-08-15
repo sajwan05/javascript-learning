@@ -230,5 +230,37 @@
     console.log('0' == []);
 }
 
+/*
+    Pseudocode:
+
+    // So we will have a function named as sumOfTripledEvens which will take an array
+    // Then we'll store sum in a variable 
+    // then we'll iterate through the array and
+    // then we'll check each item of an array for even number
+    // if item is even so we'll triple it and add it to already stroed variable 
+    // we 'll keep doing it for every even number and at last we'll display or return the sum
+*/ 
+
+
+{
+    function getSumOfTripledEvens(array){
+        let sumOfTripledEvens = 0;
+
+        for(const number of array){
+            
+            if(number % 2 === 0){
+                sumOfTripledEvens += number * 3;
+            }
+        }
+
+        return sumOfTripledEvens;
+    }
+
+    const numbers = [1, 2, 3, 4, 5];
+
+    const sum = getSumOfTripledEvens(numbers);
+
+    console.log(sum);
+}
 
 
