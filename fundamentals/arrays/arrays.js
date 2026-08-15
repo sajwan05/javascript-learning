@@ -263,4 +263,56 @@
     console.log(sum);
 }
 
+{
+    function getSumOfTripledEvens(array){
+
+        let sum = 0;
+
+        for(let i = 0; i < array.length; i++){
+
+            if(array[i] % 2 === 0){
+                array[i] *= 3;
+                sum += array[i]; 
+            }
+        }
+        console.log(array);
+
+        return sum;
+    }
+
+    const numbers = [1, 2, 3, 4, 5, 6];
+
+    const sumOfTripledEvens = getSumOfTripledEvens(numbers);
+
+    console.log(sumOfTripledEvens);
+
+}
+
+{
+    function getSumOfTripledEvens(array){
+        let sum =  0;
+
+        for(let i = array.length - 1; i >= 0; i--){
+
+            if( !(array[i] % 2) ) {
+                sum += array[i] * 3;
+            }
+        }
+
+        return sum;
+    }
+
+    const numbers = [1, 2, 3, 4, 5, 6];
+    const number = [1, 2, 3, 4, 5];
+    const num = [1, 2, 3];
+
+    const sumOfTripledEvens = getSumOfTripledEvens(numbers);
+
+    console.log(getSumOfTripledEvens(number));
+    console.log(getSumOfTripledEvens(num));
+
+    console.log(sumOfTripledEvens);
+
+}
+
 
