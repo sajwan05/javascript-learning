@@ -315,4 +315,23 @@
 
 }
 
+/*
+Pseudocode:
+
+*/
+
+{
+    function sumOfTripledEvens(array){
+        return array.filter(number => ! (number % 2) )
+            .map(item => item * 3)
+            .reduce((sum, item) => sum + item , 0);
+    }
+
+    const numbers = [1, 2, 3, 4, 5, 6];
+
+    const sumOfTripledEven = sumOfTripledEvens(numbers);
+
+    console.log(sumOfTripledEven);
+}
+
 
