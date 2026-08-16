@@ -28,3 +28,63 @@
 }
 
 // I can write a generic function for camelize
+
+{
+    function capitalize(str){
+        
+        return str
+            .at(0).toUpperCase() + str.slice(1).toLowerCase();
+    }
+
+    console.log(capitalize("hello"));
+    console.log(capitalize("heyYou"));
+}
+
+
+{
+    function capitalizes(str){
+        let capitalizeStr = "";
+
+        for(let i = 0; i < str.length; i++){
+            if ( i === 0){
+                capitalizeStr += str[i].toUpperCase();
+            }else {
+                capitalizeStr += str[i].toLowerCase();
+            }
+        }
+
+        return capitalizeStr;
+    }
+
+    console.log(capitalizes("hheyYOU"));
+}
+
+{
+    function capitalizes3(str) {
+        return str.slice(0, 1).toUpperCase() + str.slice(1).toLowerCase();
+    }
+
+    console.log(capitalizes3("what!"));
+}
+
+{
+    function camelize(str){
+
+        const array = str.split("-");
+        const arr = array.filter(item => item);
+
+        arr.forEach((item, index) => {
+            if(index === 0){
+                arr[index][0].toUpperCase() + arr[index].slice(1);
+            }else {
+               arr[index] = capitalize(arr[index]);
+            }
+        })
+
+        return arr.join("");
+    }
+
+    console.log(camelize("border-left-width"));
+    console.log(camelize("-webkit-transition"));
+    console.log(camelize("list-style-image"));
+}
