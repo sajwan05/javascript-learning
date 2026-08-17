@@ -88,3 +88,30 @@
     console.log(camelize("-webkit-transition"));
     console.log(camelize("list-style-image"));
 }
+
+// camele Case 
+
+{
+    function getCapitalize(string) {
+        return string
+            .at(0).toUpperCase() + string.slice(1).toLowerCase();
+    }
+
+    function getCamelize(string){
+        const array = string.split("-");
+
+        for(let i = 0; i < array.length; i++){
+            if(i === 0){
+                array[i] = array[i].toLowerCase();
+            }else {
+                array[i] = getCapitalize(array[i]);
+            }
+        }
+
+        return array.join("");
+    }
+
+    console.log(getCamelize("my-short-string"));
+    console.log(getCamelize("MY-ShOrt-string"));
+    console.log(getCamelize("-my-short-STRing"));
+}
