@@ -115,3 +115,29 @@
     console.log(getCamelize("MY-ShOrt-string"));
     console.log(getCamelize("-my-short-STRing"));
 }
+
+{
+    function capitalize(string){
+        return string.
+            at(0).toUpperCase() + string.slice(1).toLowerCase();
+    }
+
+    function camelize(string){
+        const array = string.split("-");
+        const arr = array.filter(item => item);
+
+        for(let i = 0; i < arr.length; i ++){
+            if(i === 0) {
+                arr[i] = arr[i].toLowerCase();
+            }else {
+                arr[i] = capitalize(arr[i]);
+            }
+        }
+
+        return arr.join("");
+    }
+
+    console.log(camelize("my-short-string"));
+    console.log(camelize("background-color"));
+    console.log(camelize("--My-SHORt-String"));
+}
