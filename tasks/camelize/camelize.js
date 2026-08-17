@@ -141,3 +141,25 @@
     console.log(camelize("background-color"));
     console.log(camelize("--My-SHORt-String"));
 }
+
+{
+
+
+    function capitalize(string){
+        return string.
+            at(0).toUpperCase() + string.slice(1).toLowerCase();
+    }
+
+    function camelize(str){
+        return str.split("-")
+            .filter(item => item)
+            .map((element, index) => {
+               return  index === 0 ? element.toLowerCase() :
+                capitalize(element);
+            }).join("");
+    }
+
+    console.log(camelize("my-short-string"));
+    console.log(camelize("background-color"));
+    console.log(camelize("--My-SHORt-String"));
+}
