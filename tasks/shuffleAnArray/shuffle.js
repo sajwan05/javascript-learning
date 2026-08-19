@@ -131,3 +131,20 @@ then i will return the shuffled array
     console.log(shuffleArr([1, 2, 3]));
 }
 }
+
+{
+    function shuffle(arr){
+
+        for(let i = arr.length - 1; i > 0; i--){
+            const rndIndex = Math.floor(Math.random() * (i + 1));
+
+            let temp = arr[i];
+            arr[i] = arr[rndIndex];
+            arr[rndIndex] = temp;
+        }
+
+        return arr;
+    }
+
+    console.log(shuffleArr([1, 2, 3]));
+}
