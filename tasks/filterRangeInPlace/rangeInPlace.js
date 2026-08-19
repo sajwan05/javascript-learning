@@ -16,6 +16,7 @@ Pseudocode:
 
             
         })
+        // I know this is wrong
 
         console.log(arr);
     }
@@ -44,3 +45,27 @@ Pseudocode:
     getFilterRangeInPlace([2, 4, 6, 7, 8, 10, 34, 54, 65], 6, 34);
 }
 
+{
+    function getFilterRange(arr, min, max){
+        if(min > max){
+            let temporary = max;
+            max = min;
+            min = temporary;
+        }
+
+        for(let i = arr.length - 1; i >= 0; i --){
+            if(arr[i] < min || arr[i] > max){
+                arr.splice(i, 1);
+            }
+        }
+
+        console.log(arr);
+        return arr;
+    }
+
+    getFilterRange([5, 3, 8, 1], 1, 4);
+    getFilterRange([2, 4, 6, 7, 8, 10, 34, 54, 65], 1, 40);
+    getFilterRange([2, 4, 6, 7, 8, 10, 34, 54, 65], 11, 40);
+    getFilterRange([2, 4, 6, 7, 8, 10, 34, 54, 65], 6, 34);
+    getFilterRange([2, 4, 6, 7, 8, 10, 34, 54, 65], 10, 4);
+}
