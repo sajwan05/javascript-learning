@@ -28,3 +28,37 @@ will just move to next item
     console.log(arrOfStrings);
     console.log(unique);
 }
+
+// {
+//     function getUniqueArrItems(arr){
+//         let unique = [];
+
+//         unique = arr.filter(item => !unique.includes(item));
+
+//         return unique;
+//     }
+
+//     const arrOfStrings = ["Hare", "Krishna", "Hare",    "Krishna",
+//         "Krishna", "Krishna", "Hare", "Hare", ":-O"
+//     ];
+//     const unique = getUniqueArrItems(arrOfStrings);
+
+//     console.log(arrOfStrings);
+//     console.log(unique);
+
+// }
+
+{
+    function unique(arr){
+        return arr.filter((item, index) => arr.indexOf(item) === index);
+    }
+
+    const arrOfStrings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+    const uniqueArr = unique(arrOfStrings);
+
+    console.log(arrOfStrings);
+    console.log(uniqueArr);
+}
+
