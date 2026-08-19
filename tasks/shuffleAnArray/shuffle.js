@@ -146,5 +146,5 @@ then i will return the shuffled array
         return arr;
     }
 
-    console.log(shuffleArr([1, 2, 3]));
+    console.log(shuffle([1, 2, 3]));
 }
