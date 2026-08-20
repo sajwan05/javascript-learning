@@ -1,0 +1,33 @@
+/*
+Pseudocode:
+first we will iterate through the given array backwards
+then we will check if our rest parameter have current item of array in it 
+if yes
+    so we will remove it 
+else 
+    move on
+then we will get the resultant array
+*/ 
+
+{
+    function removeFromAnArray(array, ...args){
+
+        for(let i = array.length - 1; i >= 0; i--){
+            if(args.includes(array[i])){
+                array.splice(i, 1);
+            }
+        }
+
+        return array;
+    }
+
+    console.log(removeFromAnArray([2, 3, 5, 6, 7, 8, 9, 11], 3, 7, 9));
+}
+
+{
+    function removeFromAnArray2(arr, ...args){
+        return arr.filter((item, index) => !args.includes(item));
+    }
+
+    console.log(removeFromAnArray2([2, 3, 5, 6, 7, 8, 9, 11], 3, 7, 9));
+}
