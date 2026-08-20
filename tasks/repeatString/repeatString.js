@@ -25,3 +25,14 @@ and will keep concatenating original string to the new intialized empty string
     console.log(getRepeatedString("Hey", 4));
     console.log(getRepeatedString("you", -4));
 }
+
+{
+    function getRepeatedString(string, number){
+        if(number < 0) return "ERROR"; 
+        return string.repeat(number);
+    }
+
+    console.log(getRepeatedString("Hello", 3));
+    console.log(getRepeatedString("Hey", 4));
+    console.log(getRepeatedString("you", -4));
+}
