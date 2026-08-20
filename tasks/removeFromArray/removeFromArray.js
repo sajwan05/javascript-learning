@@ -50,3 +50,20 @@ then we will get the resultant array
     console.log(removeFromAnArray3([2, 3, 5, 6, 7, 8, 9, 11], 3, 7, 9));
     console.log(removeFromAnArray3([1, 2, 3, 4, 5, 6, 7, "hello", "you"], 1, "hello", "you"));
 }
+
+{
+    function removeFromAnArray4(array, ...rest){
+        const newArray = [];
+
+        array.forEach((item) => {
+            if(!rest.includes(item)){
+                newArray.push(item);
+            }
+        })
+
+        return newArray;
+    }
+
+    console.log(removeFromAnArray4([2, 3, 5, 6, 7, 8, 9, 11], 3, 7, 9));
+    console.log(removeFromAnArray4([1, 2, 3, 4, 5, 6, 7, "hello", "you"], 1, "hello", "you"));
+}
