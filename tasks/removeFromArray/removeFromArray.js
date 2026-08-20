@@ -75,9 +75,8 @@ then we will get the resultant array
         for(const item of arr){
             if(rest.includes(item)){
                 continue;
-            }else {
-                array.push(item);
             }
+                array.push(item);
         }
 
         return array;
