@@ -67,3 +67,23 @@ then we will get the resultant array
     console.log(removeFromAnArray4([2, 3, 5, 6, 7, 8, 9, 11], 3, 7, 9));
     console.log(removeFromAnArray4([1, 2, 3, 4, 5, 6, 7, "hello", "you"], 1, "hello", "you"));
 }
+
+{
+    function removeFromAnArray5(arr, ...rest){
+        const array = [];
+
+        for(const item of arr){
+            if(rest.includes(item)){
+                continue;
+            }else {
+                array.push(item);
+            }
+        }
+
+        return array;
+    }
+
+    console.log(removeFromAnArray5([2, 3, 5, 6, 7, 8, 9, 11], 3, 7, 9));
+    console.log(removeFromAnArray5([1, 2, 3, 4, 5, 6, 7, "hello", "you"], 1, "hello", "you"));
+
+}
