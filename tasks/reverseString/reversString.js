@@ -25,3 +25,12 @@ or we can just split it reverse it and join it back
 
     console.log(reverseString("hello, there!"));
 }
+
+{
+    function getReverseString(string){
+        return string.split("").reverse().join("");
+    }
+
+    console.log(getReverseString("hello"));
+    console.log(getReverseString("hello, there!"));
+}
