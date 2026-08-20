@@ -34,3 +34,19 @@ or we can just split it reverse it and join it back
     console.log(getReverseString("hello"));
     console.log(getReverseString("hello, there!"));
 }
+
+{
+    function getReverseString(string){
+        let array = string.split("");
+
+        const arrayReversed = []
+        for(let i = array.length - 1; i >= 0; i--){
+            arrayReversed.push(array[i]);
+        }
+
+        return arrayReversed.join("");
+    }
+
+    console.log(getReverseString("hello"));
+    console.log(getReverseString("hello, there!"));
+}
