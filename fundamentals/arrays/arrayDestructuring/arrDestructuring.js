@@ -132,3 +132,13 @@
     console.log(others);
 }
 
+{
+    const otherPlanets = ["Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
+
+    const [first, second, ...rest] = ["Mercury", "Venus", ...otherPlanets];
+
+
+    console.log(first);
+    console.log(second);
+    console.log(rest);
+}
