@@ -37,3 +37,21 @@ or divisible by four hundred
     console.log(leapYears(1800));
     console.log(leapYears(1600));
 }
+
+{
+    function leapYears (year) {
+        const isDivisibleByFour = year % 4 === 0;
+        const isCentury = year % 100 === 0;
+        const isDivisibleByFourHundred = year % 400 === 0;
+
+        return (
+            isDivisibleByFour && (!isCentury || isDivisibleByFourHundred)
+        );
+    }
+
+    console.log(leapYears(2024));
+    console.log(leapYears(1984));
+    console.log(leapYears(1900));
+    console.log(leapYears(1800));
+    console.log(leapYears(1600));
+}
