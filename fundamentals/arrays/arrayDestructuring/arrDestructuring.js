@@ -16,3 +16,25 @@
 
       console.log(third);
 }
+
+// This will throw an error bcz you can not use Numbers for destructuring because numbers can't be variable names
+
+
+{
+    const householdItems = ["Table", "Chair", "Fan"];
+
+    const [a, b, c] = householdItems;
+
+    console.log(c);
+    console.log(a);
+    console.log(householdItems);
+}
+
+// Declaration and assignment can be done separately in destructuring
+
+{
+    let first, second;
+
+    [first, second] = ["Male", "Female"];
+}
+
