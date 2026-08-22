@@ -45,9 +45,9 @@ console.log(controls4);
     // parentNode.removeChild(child)
 
 // Altering elements
-
+    let div;
 {
-    const div = document.createElement("div");
+    div = document.createElement("div");
 
     div.style.color = "blue";
     div.setAttribute("style", "color:blue; background: #fff;");
@@ -61,3 +61,32 @@ console.log(controls4);
 
     div.removeAttribute("id");
 }
+
+// adds class "new" to your new div
+
+    div.classList.add("new");
+    console.log(div);
+
+// removes "new" class from div
+
+    div.classList.remove("new");
+
+// 
+    div.classList.toggle("active");
+
+// Adding text content
+
+    div.textContent = "Hello, World!";
+
+// Adding HTML content
+
+    div.innerHTML = "<span>Hello World!</span>";
+
+// let's add one more div to the html
+
+    const content = document.createElement("div");
+    content.classList.add("content");
+
+    content.textContent = "This is the glorious text-content!";
+
+    container.insertBefore(content, controls4);
