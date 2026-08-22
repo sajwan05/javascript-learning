@@ -27,3 +27,37 @@ console.log(display2);
 const controls4 = display.nextElementSibling;
 
 console.log(controls4);
+
+// Dom methods 
+
+// Query Selector
+// element.querySelector(selector) -returns a reference to the first match of selector
+// element.querySelectorAll(selector) - returns a "NodeList" containing references to all of the matches of the Selectors.
+
+// Element creation 
+// document.createElement(tagName, [options])
+
+// Append element
+    // parentNode.appendChild(childNode) - appends childNode as the last child of parentNode.
+    // parentNode.insertBefore(newNode, referenceNode)-- insert newNode into parentNode before referenceNode.
+
+// Remove elements
+    // parentNode.removeChild(child)
+
+// Altering elements
+
+{
+    const div = document.createElement("div");
+
+    div.style.color = "blue";
+    div.setAttribute("style", "color:blue; background: #fff;");
+
+    console.log(div);
+
+    div.setAttribute("id", "theDiv");
+
+    console.log(div.getAttribute("id"));
+    console.log(div);
+
+    div.removeAttribute("id");
+}
