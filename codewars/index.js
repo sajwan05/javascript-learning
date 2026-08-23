@@ -69,3 +69,27 @@
     console.log(checkOddOrEven(undefined));
     console.log(checkOddOrEven(34));
 }
+
+// convert numbers to string
+
+{
+    function convertToString(num){
+        if(Number.isInteger(num)){
+            return num.toString();
+        }
+
+        return "Please enter valid number";
+    }
+
+    console.log(convertToString(23));
+    console.log(convertToString("Hello"));
+}
+
+{
+    function convertToString(num){
+        return num + "";
+    }
+
+    console.log(convertToString(23));
+    console.log(convertToString("Hello"));
+}
