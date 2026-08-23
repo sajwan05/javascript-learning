@@ -40,3 +40,32 @@
     // console.log(checkOddOrEven(undefined));
     console.log(checkOddOrEven(34));
 }
+
+{
+    function checkOddOrEven(number){
+        return typeof number === "number" ?
+            (number % 2 ? "Odd" : "Even" ) :
+            "Error input";
+    }
+
+    console.log(checkOddOrEven(23));
+    console.log(checkOddOrEven(-35));
+    // console.log(checkOddOrEven("34"));
+    console.log(checkOddOrEven(undefined));
+    console.log(checkOddOrEven(34));
+}
+
+
+{
+    function checkOddOrEven(number){
+        return typeof number === "number" ?
+            number % 2 ? "Odd" : "Even" :
+            "Please enter valid integer";
+    }
+
+    console.log(checkOddOrEven(23));
+    console.log(checkOddOrEven(-35));
+    // console.log(checkOddOrEven("34"));
+    console.log(checkOddOrEven(undefined));
+    console.log(checkOddOrEven(34));
+}
