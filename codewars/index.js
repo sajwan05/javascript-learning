@@ -93,3 +93,30 @@
     console.log(convertToString(23));
     console.log(convertToString("Hello"));
 }
+
+// Reverse The string 
+
+{
+    function getReverseString(string){
+        return string.split("").reverse().join("");
+    }
+
+    console.log(getReverseString("world!"));
+    console.log(getReverseString("hello"));
+}
+
+
+{
+    function getReversedString(string){
+        let reversedString = "";
+
+        for(let i = string.length - 1; i >= 0; i --){
+            reversedString += string[i];
+        }
+
+        return reversedString;
+    }
+
+    console.log(getReverseString("world!"));
+    console.log(getReverseString("hello"));
+}
