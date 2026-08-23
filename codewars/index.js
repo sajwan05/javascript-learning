@@ -120,3 +120,13 @@
     console.log(getReverseString("world!"));
     console.log(getReverseString("hello"));
 }
+
+{
+    function returnNegative(num){
+        return num >= 0 ? num : -num;
+    }
+
+    console.log(returnNegative(3));
+    console.log(returnNegative(0));
+    console.log(returnNegative(-1));
+}
