@@ -249,7 +249,7 @@
         const comments = comment.split("");
 
         for(let i = comments.length - 1; i >= 0; i--){
-            switch(comment[i].toLowerCase()){
+            switch(comments[i].toLowerCase()){
                 case "a":
                     comments.splice(i, 1);
                     break;
@@ -272,4 +272,16 @@
     }
 
     console.log(removeVowelsFromComments2("This is what it is LOSER"));
+}
+
+{
+    function disemVowelComments(comment){
+
+        const comments = comment.split("");
+        const vowels = ["a", "e", "i", "o", "u"];
+
+        return comments.filter(item => !vowels.includes(item.toLowerCase())).join("");
+    }
+
+    console.log(disemVowelComments("Hey you are shit, human being."));
 }
