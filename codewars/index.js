@@ -130,3 +130,62 @@
     console.log(returnNegative(0));
     console.log(returnNegative(-1));
 }
+
+// Date 24 August 2026 --- Time 18:06
+
+// So i have to return count of vowels in given strings
+
+// Pseudocode:
+// first I will be declaring and assigning a count variable to count the vowels
+// then I will iterate thorugh the string and
+    // will check for vowels
+    // then if found will increment count by 1
+// eventually will return it
+{
+    function getCountOfVowels(string){
+        if(typeof string !== "string") throw new Error ("Please enter valid strings");
+
+        let countVowel = 0;
+
+        const vowels = ["a", "e", "i", "o", "u"];
+
+        for(let i = 0; i < string.length; i ++){
+            if(vowels.includes(string[i])){
+                countVowel ++;
+            }
+        }
+
+        return countVowel;
+    }
+
+    console.log(getCountOfVowels("suraj sajwan"));
+    console.log(getCountOfVowels("suraj singh sajwan"));
+    console.log(getCountOfVowels("sooraj singh sajwan"));
+}
+
+{
+    function getCountOfVowels(string){
+        if(typeof string !== "string") return 0;
+
+        string = string.toLowerCase();
+
+        let countVowel = 0;
+
+        for(let i = 0; i < string.length; i ++){
+            let char = string[i];
+
+            if(char === "a" || 
+               char === "e" ||
+               char === "i" ||
+               char === "o" ||
+               char === "u" 
+            ) countVowel ++
+        }
+
+        return countVowel;
+    }
+
+    console.log(getCountOfVowels("suraj sajwan"));
+    console.log(getCountOfVowels("suraj singh sajwan"));
+    console.log(getCountOfVowels("sooraj singh sajwan"));
+}
