@@ -241,3 +241,35 @@
     console.log(removeVowelsFromComments("This one is FOR losers LOL"));
 }
 
+{
+    function removeVowelsFromComments2(comment){
+
+        if(typeof comment !== "string") throw new Error("Please enter valid strings");
+
+        const comments = comment.split("");
+
+        for(let i = comments.length - 1; i >= 0; i--){
+            switch(comment[i].toLowerCase()){
+                case "a":
+                    comments.splice(i, 1);
+                    break;
+                case "e":
+                    comments.splice(i, 1);
+                    break;
+                case "i":
+                    comments.splice(i, 1);
+                    break;
+                case "o":
+                    comments.splice(i, 1);
+                    break;
+                case "u":
+                    comments.splice(i, 1);
+            }
+
+        }
+
+        return comments.join("");
+    }
+
+    console.log(removeVowelsFromComments2("This is what it is LOSER"));
+}
