@@ -189,3 +189,21 @@
     console.log(getCountOfVowels("suraj singh sajwan"));
     console.log(getCountOfVowels("sooraj singh sajwan"));
 }
+
+{
+    function getVowelCount(string){
+        if(typeof string !== "string") throw new Error ("Please enter the valid string");
+        
+        string = string.toLowerCase();
+
+        const vowels = ["a", "e", "i", "o", "u"];
+
+        return string.split("").filter(character => vowels.includes(character)).length;
+    }
+
+    console.log(getVowelCount("suraj singh sajwan"));
+    console.log(getVowelCount("anshul tiwari"));
+    console.log(getVowelCount("aayush khanduri"));
+    console.log(getVowelCount("Dev kaushik"));
+    console.log(getVowelCount("prashant baghel"));
+}
