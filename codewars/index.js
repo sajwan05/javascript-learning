@@ -207,3 +207,37 @@
     console.log(getVowelCount("Dev kaushik"));
     console.log(getVowelCount("prashant baghel"));
 }
+
+// Disemvowel the trolls --- so basically we have to remove vowels from the trolls comments
+// so this is for loser lol -- becomes -- ths s fr lsr ll
+
+// Pseudocode 
+// first of all we will convert the comments to an array 
+// then we'll have an collection containing all the vowel 
+// then we will iterate through the comments array
+// and will check for vowels a
+// and then if vowels will be there will remove it 
+// and then will return the string by converting arrays to strings
+
+{
+    function removeVowelsFromComments(comment){
+        if(typeof comment !== "string") throw new Error ("Please enter the valid string");
+
+        const commentsArray = comment.split("");
+
+        const vowels = ["a", "e", "i", "o", "u"];
+
+        for(let i = commentsArray.length - 1; i >= 0; i--){
+            let char = commentsArray[i];
+
+            if(vowels.includes(char.toLowerCase())){
+                commentsArray.splice(i, 1);
+            }
+        }
+
+        return commentsArray.join("");
+    }
+
+    console.log(removeVowelsFromComments("This one is FOR losers LOL"));
+}
+
