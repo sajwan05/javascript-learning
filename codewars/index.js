@@ -341,3 +341,42 @@
     console.log(getSquareOfDigitsConcatenated(908));
     console.log(getSquareOfDigitsConcatenated(1));
 }
+
+
+{
+    function getSquares(number){
+        return Math.abs(number).
+            toString().
+            split("").
+            map(item => item*item).
+            join("");
+    }
+
+    console.log(getSquares(456));
+    console.log(getSquares(123));
+    console.log(getSquares(45678));
+}
+
+// string repeat 
+
+{
+    function repeatString(word, times){
+        let repeatedString = "";
+
+        for(let i = 1; i <= times; i++){
+            repeatedString += word;
+        }
+
+        return repeatedString;
+    }
+
+    console.log(repeatString("suraj", 3));
+}
+
+{
+    function repeatString(word, times){
+        return word.repeat(times);
+    }
+
+    console.log(repeatString("hello", 2));
+}
