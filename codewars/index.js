@@ -380,3 +380,18 @@
 
     console.log(repeatString("hello", 2));
 }
+
+// remove first and last character of a string
+
+{
+    function removeTeminalEnds(string){
+        if(typeof string !== "string") throw new Error ('Please enter valid string please.');
+
+        return string.slice(1, string.length - 1);
+    }
+
+    console.log(removeTeminalEnds("eloquent"));
+    console.log(removeTeminalEnds("a"));
+    console.log(removeTeminalEnds("ab"));
+    console.log(removeTeminalEnds("abc"));
+}
