@@ -395,3 +395,19 @@
     console.log(removeTeminalEnds("ab"));
     console.log(removeTeminalEnds("abc"));
 }
+
+// In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+{
+    function getHighAndLow(numbers){
+        let array = numbers.split(" ");
+
+        const max = Math.max(...array);
+        const min = Math.min(...array);
+
+        return `${max} ${min}`;
+    }
+
+    console.log(getHighAndLow("1 2 3 4 5 6"));
+    console.log(getHighAndLow("5"));
+}
