@@ -318,3 +318,26 @@
 
     console.log(getConcatenatedSquareOfDigits(4567));
 }
+
+{
+    function getSquareOfDigitsConcatenated(number){
+        if(!Number.isInteger(number)) throw new Error("Please enter the valid integers");
+
+        number = Math.abs(number);
+
+        const array = number.toString().split("");
+
+        const concatenatedSquares = [];
+
+        for(const item of array){
+            let square = item * item;
+            concatenatedSquares.push(square);
+        }
+
+        return concatenatedSquares.join("");
+    }
+
+    console.log(getSquareOfDigitsConcatenated(345));
+    console.log(getSquareOfDigitsConcatenated(908));
+    console.log(getSquareOfDigitsConcatenated(1));
+}
