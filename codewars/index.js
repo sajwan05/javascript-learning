@@ -285,3 +285,36 @@
 
     console.log(disemVowelComments("Hey you are shit, human being."));
 }
+
+// Date 12:45 August 25 2026
+// return square of each digit concatenated together
+// Pseudocode
+// first of all we will turn negative numbers to absolute numbers
+// then we will have to check if given input in integer/num or not 
+// then we will convert our number to string we can also do with array num --- string ---arr
+// then we will declare and intialize an empty string
+// then we will iterate through the converted strings of number
+        // then for each character we will multiply it by itself
+        // and will concatenate it to empty strings
+// then will convert concatenated squares to number 
+// and then will return it
+{
+    function getConcatenatedSquareOfDigits(number){
+        if(!Number.isInteger(number)) throw new Error("Please enter valid number");
+        
+        if(number < 0 ) number = Math.abs(number);
+
+        let stringOfNumber = number.toString();
+        let concatenatedSquare = "";
+
+        for(let i = 0; i < stringOfNumber.length; i++){
+            let char = stringOfNumber[i];
+
+            concatenatedSquare += char * char;
+        }
+
+        return parseInt(concatenatedSquare);
+    }
+
+    console.log(getConcatenatedSquareOfDigits(4567));
+}
