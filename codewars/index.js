@@ -411,3 +411,17 @@
     console.log(getHighAndLow("1 2 3 4 5 6"));
     console.log(getHighAndLow("5"));
 }
+
+{
+    function getHighAndLow(numbers){
+        const array = numbers.split(" ");
+
+        array.sort((a, b) => b - a);
+
+        return `${array[array.length - 1]} ${array[0]}`;
+    }
+
+    console.log(getHighAndLow("3 6 7 -7 4 5"));
+    console.log(getHighAndLow("5"));
+
+}
