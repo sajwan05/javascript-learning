@@ -49,6 +49,6 @@ button.addEventListener("click", changeBgColor);
 
 //     const target = e.target;
 //     // console.log(target);
-//    target.setAttribute("style", "background: randomColor;");
+//    target.setAttribute("style", `background: ${randomColor};`);
 
 // })

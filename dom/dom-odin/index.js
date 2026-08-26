@@ -24,4 +24,7 @@ btn.addEventListener("click", () => {
 
 btn.addEventListener("click", (e) => {
     console.log(e);
+    console.log(e.target);
+    e.target.style.backgroundColor = "blue";
+    e.target.style.color = "#fff";
 })
