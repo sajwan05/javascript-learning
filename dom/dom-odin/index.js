@@ -19,3 +19,9 @@ const btn = document.querySelector(".method3");
 btn.addEventListener("click", () => {
     console.log("Hello, World!");
 });
+
+// more info about the event
+
+btn.addEventListener("click", (e) => {
+    console.log(e);
+})
