@@ -461,3 +461,13 @@
 
     console.log(getSumOfSquares2([1, 2, 3]));
 }
+
+
+{
+    function getSumOfSquares3(numbers){
+        return numbers 
+            .reduce((total, number) => total + number * number, 0);
+    }
+
+    console.log(getSumOfSquares3([1, 2, 3]));
+}
