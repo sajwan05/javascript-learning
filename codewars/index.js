@@ -510,3 +510,31 @@
 
     console.log(filterListFromString1([1, 2, 4, 5, "a", 5, "b"]));
 }
+
+// improvement
+
+{
+    function filterListFromString3(list){
+
+        const arrayNumbers = [];
+
+        for(const item of list){
+            if(typeof item === "number"){
+                arrayNumbers.push(item);
+            }
+        }
+
+        return arrayNumbers;
+    }
+
+    console.log(filterListFromString3([1, 2, 5, "adf", 8, "dh", "hj", 67]));
+}
+
+{
+    function filterList2 (list){
+        return list 
+            .filter(item => typeof item === "number");
+    }
+
+    console.log(filterList2([1, "b", "c", "b", 6, 4, 5]));
+}
