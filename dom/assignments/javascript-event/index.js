@@ -25,10 +25,22 @@ btn.addEventListener("click", (e) => {
     console.log(e.detail);
     console.log(e.eventPhase);
     e.stopPropagation();
-    console.log("Button was clicked");
+})
+
+
+
+// preventDefault()
+
+const link = document.querySelector("a");
+
+link.addEventListener("click", (e) => {
+    console.log(e.type);
+    console.log(e.target);
+    console.log(e.bubbles);
+
+    e.preventDefault();
 })
 
 document.body.addEventListener("click", () => {
     console.log("body was clicked");
 })
-
