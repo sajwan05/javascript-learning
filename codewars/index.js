@@ -425,3 +425,30 @@
     console.log(getHighAndLow("5"));
 
 }
+
+// August 26 2026 8 AM
+
+// square sum in given array so we have to square each element of given array and then sum it
+
+// Psuedocode 
+// we can do map and reduce
+// but for problem solving purposes
+// first we will have a variable initialized with zero which will keep track of sum
+// then we will iterate through the given collection
+    // then we will square each element 
+    // then will sum it in each iteration 
+// at last will return the sum
+
+{
+    function getSumOfSquares(numbers){
+        let sum = 0;
+
+        for(const number of numbers){
+            sum += number * number;
+        }
+
+        return sum;
+    }
+
+    console.log(getSumOfSquares([1, 2, 3]));
+}
