@@ -471,3 +471,42 @@
 
     console.log(getSumOfSquares3([1, 2, 3]));
 }
+
+// filter list given an array of numbers and strings filter out strings and return array with only number element
+
+// Pseudocode
+// first we will iterate through the array backward
+    // then we will check for each item if it is string
+        // if yes 
+            // delete it
+// return the array
+
+{
+    function filterListFromString(array){
+        for(let i = array.length - 1; i >= 0; i--){
+            if(typeof array[i] === "string"){
+                array.splice(i, 1);
+            }
+        }
+
+        return array;
+    }
+
+    console.log(filterListFromString([1, 2, 4, 5, "a", 5, "b"]));
+}
+
+{
+    function filterListFromString1(list){
+        const arrayOfNumbers = [];
+
+        for(const item of list){
+            if(typeof item !== "string"){
+                arrayOfNumbers.push(item);
+            }
+        }
+
+        return arrayOfNumbers;
+    }
+
+    console.log(filterListFromString1([1, 2, 4, 5, "a", 5, "b"]));
+}
