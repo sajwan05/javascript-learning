@@ -28,3 +28,16 @@ btn.addEventListener("click", (e) => {
     e.target.style.backgroundColor = "blue";
     e.target.style.color = "#fff";
 })
+
+// 
+const buttonNodeList = document.querySelectorAll(".btn");
+
+console.log(buttonNodeList);
+
+buttonNodeList.forEach( (button) =>{
+    button.addEventListener("click", (e) => {
+        console.log(button.id);
+        console.log(e);
+        console.log(e.target);
+    })
+} )
