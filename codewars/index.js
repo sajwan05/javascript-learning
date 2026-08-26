@@ -452,3 +452,12 @@
 
     console.log(getSumOfSquares([1, 2, 3]));
 }
+
+{
+    function getSumOfSquares2(numbers){
+        return numbers.map(number => number * number)
+                    .reduce((sum, number) => sum + number, 0);
+    }
+
+    console.log(getSumOfSquares2([1, 2, 3]));
+}
