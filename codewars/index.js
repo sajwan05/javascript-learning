@@ -538,3 +538,23 @@
 
     console.log(filterList2([1, "b", "c", "b", 6, 4, 5]));
 }
+
+// function takes non negative integer and return it with its digits in descending order esentially rearrange the digits to create the highest possible number.
+
+// pseudocode
+// we will convert the number to string and then array
+// then will sort the array in descending order
+// and then will convert it back to string and number
+// and return the highest number possible
+
+{
+    function getHighestNumber(number){
+        const array = number.toString().split("");
+
+        array.sort( (a, b) => b - a );
+
+        return parseInt(array.join(""));
+    }
+
+    console.log(getHighestNumber(3453432566));
+}
