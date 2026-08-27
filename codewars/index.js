@@ -587,3 +587,16 @@
     console.log(isPerfectSquare(0));
     console.log(isPerfectSquare(-1));
 }
+
+{
+    function isPerfectSquare(number){
+        let result = Math.sqrt(number);
+
+        return Number.isInteger(result);
+    }
+    console.log(isPerfectSquare(3));
+    console.log(isPerfectSquare(4));
+    console.log(isPerfectSquare(1));
+    console.log(isPerfectSquare(0));
+    console.log(isPerfectSquare(-1));
+}
