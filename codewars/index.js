@@ -600,3 +600,21 @@
     console.log(isPerfectSquare(0));
     console.log(isPerfectSquare(-1));
 }
+
+{
+    function isPerfectSquare(number){
+        let sqrt = Math.sqrt(number);
+
+        if(Math.floor(sqrt) === sqrt){
+            return true;
+        }
+
+        return false;
+    }
+
+    console.log(isPerfectSquare(3));
+    console.log(isPerfectSquare(4));
+    console.log(isPerfectSquare(1));
+    console.log(isPerfectSquare(0));
+    console.log(isPerfectSquare(-1));
+}
