@@ -558,3 +558,32 @@
 
     console.log(getHighestNumber(3453432566));
 }
+
+
+// Date 27th August 2026 ---- 9:20 AM
+
+// given a number find if it is perfect square or not
+
+// Pseudocode 
+// so we can generate number from 0 to n
+// and then multiply number by itself 
+// and if it ever comes equal to given number so we will know that it is perfect square
+
+{
+    function isPerfectSquare(number){
+        for(let i = 0; i <= Math.sqrt(number); i++){
+            let value = i * i;
+
+            if(value === number){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    console.log(isPerfectSquare(3));
+    console.log(isPerfectSquare(4));
+    console.log(isPerfectSquare(1));
+    console.log(isPerfectSquare(0));
+    console.log(isPerfectSquare(-1));
+}
