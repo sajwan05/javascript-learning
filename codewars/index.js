@@ -618,3 +618,25 @@
     console.log(isPerfectSquare(0));
     console.log(isPerfectSquare(-1));
 }
+
+// 28 august 2026 rakshabandahan morning session before going at cousins place
+
+// given an array with true and false undefined null NaN event find number of items in array which are true find sheeps
+
+{
+    function findSheeps(array){
+
+        const itemArrays = [];
+
+        for(const item of array){
+            if(item === true){
+                itemArrays.push(item);
+            }
+        }
+
+        return itemArrays.length;
+    }
+
+    console.log(findSheeps([true, undefined, false, undefined, true, 0, NaN, true]));
+}
+
