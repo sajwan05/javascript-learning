@@ -640,3 +640,10 @@
     console.log(findSheeps([true, undefined, false, undefined, true, 0, NaN, true]));
 }
 
+{
+    function findSheep(sheeps){
+        return sheeps.filter(sheep => sheep).length;
+    }
+
+    console.log(findSheep([true, undefined, false, undefined, true, 0, NaN, true, true, false, true, undefined]));
+}
