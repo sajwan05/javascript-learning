@@ -647,3 +647,43 @@
 
     console.log(findSheep([true, undefined, false, undefined, true, 0, NaN, true, true, false, true, undefined]));
 }
+
+// Codewars august 30 2026 7:47 PM
+
+// given string with spaces return string without spaces
+// pseudocode:
+
+// first of all we will initialize an empty strings
+// then we will check each character for
+        // we will check if it is not empty
+        // so we will concatenate it to initialized string
+// then we will return the concatenated string 
+
+// or
+// we can just use string to array and back to string
+{
+    function getStringWithoutSpaces(str){
+        
+        let stringWithoutSpaces = "";
+
+        for(let i = 0; i < str.length; i ++){
+
+            if(str[i].trim() !== ""){
+                stringWithoutSpaces += str[i];
+            }
+        }
+
+        return stringWithoutSpaces;
+    }
+
+    console.log(getStringWithoutSpaces("8 j 8"));
+    console.log(getStringWithoutSpaces("4 jkl 5 l d f jkl lk"));
+}
+
+{
+    function getStrWoSpaces(str){
+        return str.split(" ").join("");
+    }
+
+    console.log(getStrWoSpaces("5 k l jh"));
+}
