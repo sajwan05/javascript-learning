@@ -766,4 +766,29 @@
     console.log(checkIsograms("duckworthle"));
     console.log(checkIsograms("helloWorld"));
     console.log(checkIsograms("oOl"));
+    console.log(checkIsograms("hHjkLl"));
+}
+
+{
+    function isIsogram(word){
+
+        const arrToCompare = [];
+
+        const array = word.split("");
+
+        for(const item of array){
+
+            if(!arrToCompare.includes(item.toLowerCase())){
+                arrToCompare.push(item.toLowerCase());
+            }
+        }
+
+        return arrToCompare.join("") === word;
+    }
+
+    console.log(isIsogram("aba"));
+    console.log(isIsogram("duckworthle"));
+    console.log(isIsogram("helloWorld"));
+    console.log(isIsogram("oOl"));
+    console.log(isIsogram("hHjkLl"));
 }
