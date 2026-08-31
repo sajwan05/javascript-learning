@@ -732,3 +732,38 @@
 
     console.log(getMultipleOfBoth(4, 16, 56));
 }
+
+// Isograms:
+// Pseudocode
+// so first we will convert the string into array
+// then we will intialize an empty array
+// then we will iterate through the converted array
+//      and check if empty array do not already include 
+//      items of an array
+//      if it doesn't so we will push it otherwise
+//      we will return false and that's it
+// and return true 
+{
+    function checkIsograms(word){
+
+        const array = [];
+
+        const arrayOfString = word.split("");
+
+        for(const item of arrayOfString){
+            if(!array.includes(item.toLowerCase())){
+                array.push(item);
+            }else {
+                return false;
+            }
+        }
+
+        return true;
+
+    }
+
+    console.log(checkIsograms("aba"));
+    console.log(checkIsograms("duckworthle"));
+    console.log(checkIsograms("helloWorld"));
+    console.log(checkIsograms("oOl"));
+}
