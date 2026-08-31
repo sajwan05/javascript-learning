@@ -771,6 +771,8 @@
     console.log(checkIsograms("Ool"));
 }
 
+// Not so efficient
+
 {
     function isIsogram(word){
 
@@ -781,11 +783,11 @@
         for(const item of array){
 
             if(!arrToCompare.includes(item.toLowerCase())){
-                arrToCompare.push(item);
+                arrToCompare.push(item.toLowerCase());
             }
         }
 
-        return arrToCompare.join("") === word;
+        return arrToCompare.join("") === word.toLowerCase();
     }
 
     console.log(isIsogram("aba"));
@@ -793,4 +795,26 @@
     console.log(isIsogram("helloWorld"));
     console.log(isIsogram("oOl"));
     console.log(isIsogram("hHjkLl"));
+    console.log(isIsogram("Ool"));
+}
+
+{
+    function isIso(word){
+        let seen = "";
+
+        for(let i = 0; i < word.length; i ++){
+            if(!seen.includes(word[i].toLowerCase())){
+                seen += word[i].toLowerCase();
+            }else {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    console.log(isIso("bob"));
+    console.log(isIso("oOl"));
+    console.log(isIso("Oolbc"));
+    console.log(isIso("hey"));
 }
