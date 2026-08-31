@@ -716,3 +716,19 @@
 
     console.log(getMultipleOfBoth(3, 7, 50));
 }
+
+{
+    function getMultipleOfBoth(a, b, limit){
+        const multipleOfBoth = [];
+
+        for(let i = a; i <= limit; i ++){
+            if(i % a === 0  && i % b === 0){
+                multipleOfBoth.push(i);
+            }
+        }
+
+        return multipleOfBoth;
+    }
+
+    console.log(getMultipleOfBoth(4, 16, 56));
+}
