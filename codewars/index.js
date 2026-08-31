@@ -751,8 +751,9 @@
         const arrayOfString = word.split("");
 
         for(const item of arrayOfString){
+
             if(!array.includes(item.toLowerCase())){
-                array.push(item);
+                array.push(item.toLowerCase());
             }else {
                 return false;
             }
@@ -767,6 +768,7 @@
     console.log(checkIsograms("helloWorld"));
     console.log(checkIsograms("oOl"));
     console.log(checkIsograms("hHjkLl"));
+    console.log(checkIsograms("Ool"));
 }
 
 {
@@ -779,7 +781,7 @@
         for(const item of array){
 
             if(!arrToCompare.includes(item.toLowerCase())){
-                arrToCompare.push(item.toLowerCase());
+                arrToCompare.push(item);
             }
         }
 
