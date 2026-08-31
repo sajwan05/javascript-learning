@@ -687,3 +687,32 @@
 
     console.log(getStrWoSpaces("5 k l jh"));
 }
+
+// Codewars --- August 31 2026 --- 1: 33 PM 
+
+// given a and b and limit so we have to return an array consisting of multiple of both a and b till a limit
+
+// Pseudocode 
+// first of all we will initialize an empty array
+// then we will start iterating from a & will loop until we reach limit and will increment loop by a 
+        // then for each number 
+        // we will check if it is divisible by b
+        // if yes 
+            // so we will push it to empty array
+// then we will return the array 
+
+{
+    function getMultipleOfBoth(a, b, limit){
+
+        const multipleOfBoth = [];
+        for(let i = a; i <= limit; i += a){
+            if(i % b === 0){
+                multipleOfBoth.push(i);
+            }
+        }
+
+        return multipleOfBoth;
+    }
+
+    console.log(getMultipleOfBoth(3, 7, 50));
+}
