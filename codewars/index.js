@@ -845,3 +845,33 @@
     console.log(getMiddleCharacter("suraj"));
     console.log(getMiddleCharacter("sajwan"));
 }
+
+// get multiple of 3 and 5 below given number and sum them together and return the sum 
+
+// Pseudocode
+// so first of all we will intialize sum to 0
+// then we will generate number from 1 to below given number
+// then we will check if it is multiple of 3 or 5 and sum them 
+// return sum
+
+{
+    function getSumOfMultiples(number){
+        let sum = 0;
+
+        for(let i = 1; i < number; i++){
+
+            if(i % 3 === 0 && i % 5 === 0){
+                sum += i;
+            }else if (i % 3 === 0){
+                sum += i;
+            }else if(! (i % 5) ){
+                sum += i;
+            }
+        }
+
+        return sum;
+    }
+
+    console.log(getSumOfMultiples(10));
+
+}
