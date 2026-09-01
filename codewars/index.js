@@ -818,3 +818,30 @@
     console.log(isIso("Oolbc"));
     console.log(isIso("hey"));
 }
+
+// Codewars September 1 2026 12:15 PM
+
+// Get the middle character
+// Pseudocode 
+// so first of all we will get the length of the string
+// then if length is odd so we will get the middle character
+// else if length is even we will get two middle character
+
+{
+    function getMiddleCharacter(word){
+        let wordLength = word.length;
+
+        if(wordLength % 2 ){
+            const index = Math.floor(wordLength / 2);
+            return word[index];
+        }else {
+            const index = Math.floor(wordLength / 2) - 1;
+            const i = index + 1;
+
+            return `${word[index]}${word[i]}`;
+        }
+    }
+
+    console.log(getMiddleCharacter("suraj"));
+    console.log(getMiddleCharacter("sajwan"));
+}
