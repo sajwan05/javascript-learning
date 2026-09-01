@@ -875,3 +875,20 @@
     console.log(getSumOfMultiples(10));
 
 }
+
+{
+    function getSumOfMultiplesOfThreeAndFive(number){
+
+        let sum = 0;
+
+        for(let i = 1; i < number; i++){
+            if(i % 5 === 0 || i % 3 === 0){
+                sum += i;
+            }
+        }
+
+        return sum;
+    }
+
+    console.log(getSumOfMultiplesOfThreeAndFive(10));
+}
