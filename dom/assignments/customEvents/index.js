@@ -13,3 +13,12 @@ function addBorder (elem){
 }
 
 highlight(note, addBorder);
+
+
+// // Creating javascript cutom events to make code more flexible
+
+// let event = new CustomEvent('mark', {
+//     detail: {backgroundColor: aqua}
+// });
+
+// // dispatching custom events
