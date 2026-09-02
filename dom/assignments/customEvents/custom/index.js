@@ -28,7 +28,7 @@ function addBorder(elem) {
 
 // listen to the highlight event
 
-div.addEventListener("mark", (e) => {
+div.addEventListener("mark", function(e) {
     addBorder(this);
     console.log(e.detail);
 });
