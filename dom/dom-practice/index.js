@@ -20,3 +20,16 @@ const text = document.createTextNode(
 
 linkPara.appendChild(text);
 
+// Moving and removing elements
+// let's suppose we wanted to move the paragraph with link to the end of the section 
+
+section.appendChild(linkPara);
+
+para.cloneNode(true);
+section.insertBefore(para.cloneNode(true), linkPara);
+
+// removing node
+
+section.removeChild(para);
+linkPara.remove();
+
