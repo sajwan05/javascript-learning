@@ -25,11 +25,20 @@ linkPara.appendChild(text);
 
 section.appendChild(linkPara);
 
-para.cloneNode(true);
-section.insertBefore(para.cloneNode(true), linkPara);
+// para.cloneNode(true);
+// section.insertBefore(para.cloneNode(true), linkPara);
 
 // removing node
 
-section.removeChild(para);
-linkPara.remove();
+// section.removeChild(para);
+// linkPara.remove();
 
+
+// Manipulating styles
+// para.style.color = "white";
+// para.style.backgroundColor = "black";
+// para.style.padding = "10px";
+// para.style.width = "250px";
+// para.style.textAlign = "center";
+
+para.classList.add("highlight");
