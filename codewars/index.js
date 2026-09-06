@@ -892,3 +892,86 @@
 
     console.log(getSumOfMultiplesOfThreeAndFive(10));
 }
+
+// Excercism september 6, 2026
+
+{
+     function timeToMixJuice(name) {
+  let timeTakenToMixJuice = 0;
+  switch(name){
+    case "Pure Strawberry Joy":
+      timeTakenToMixJuice += 0.5;
+      break;
+    case "Energizer":
+    case "Green Garden":
+      timeTakenToMixJuice += 1.5;
+      break;
+    case "Tropical Island":
+      timeTakenToMixJuice += 3;
+      break;
+    case "All or Nothing":
+      timeTakenToMixJuice += 5;
+      break;
+    default:
+      timeTakenToMixJuice += 2.5;
+  }
+
+  return timeTakenToMixJuice;
+}
+
+/**
+ * Calculates the number of limes that need to be cut
+ * to reach a certain supply.
+ *
+ * @param {number} wedgesNeeded
+ * @param {string[]} limes
+ * @returns {number} number of limes cut
+ */
+ function limesToCut(wedgesNeeded, limes) {
+  let wedges = 0;
+  let limesNeedsToCut = 0;
+
+  while(limesNeedsToCut < limes.length && wedges < wedgesNeeded){
+    const sizeOfLime = limes[limesNeedsToCut];
+
+    switch(sizeOfLime){
+      case "small":
+        wedges += 6;
+        break;
+      case "large":
+        wedges += 10;
+        break;
+      case "medium":
+        wedges += 8;
+    }
+    limesNeedsToCut ++;
+  }
+  return limesNeedsToCut;
+}
+
+/**
+ * Determines which juices still need to be prepared after the end of the shift.
+ *
+ * @param {number} timeLeft
+ * @param {string[]} orders
+ * @returns {string[]} remaining orders after the time is up
+ */
+ function remainingOrders(timeLeft, orders) {
+  let time = 0;
+  let i = 0;
+  do{
+    const timeTakenToPrepareJuice = timeToMixJuice(orders[i]);
+    orders.splice(i, 1);
+    i--;
+    time += timeTakenToPrepareJuice;
+    i++;
+  }
+  while(time < timeLeft && i < orders.length);
+   
+  console.log(orders);
+  return orders;
+  
+}
+
+console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda", "mohito"]));
+}
