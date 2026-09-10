@@ -1224,6 +1224,8 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
             }
         }
 
+        if(largest === Number.MIN_SAFE_INTEGER) return null;
+
         return largest;
     }
 
