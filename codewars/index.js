@@ -1136,3 +1136,46 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
 
     console.log(findSmallest(numbers));
 }
+
+{
+     const numbers = [7, 3, 11, 2, 9];
+
+     function getSmallestNumber(numbers){
+        let smallest = numbers[0];
+
+        for(let i = 1; i < numbers.length; i++){
+            if(numbers[i] < smallest){
+                smallest = numbers[i];
+            }
+        }
+
+        return smallest;
+     }
+
+     console.log(getSmallestNumber(numbers));
+}
+
+// Now get the largest letter
+// first we will intialize largest with the first animal
+// then we will iterate through the array and 
+// will compare it with length of each element 
+// largest one we will return at last 
+
+{
+    const words = ["cat", "dog", "elephant", "jaguar", "lion", "bear"];
+
+    function getLargestWord(words){
+        let largestWord = words[0];
+
+        for(const animal of words.slice(1)){
+
+            if(animal.length > largestWord.length){
+                largestWord = animal;
+            }
+        }
+
+        return largestWord;
+    }
+
+    console.log(getLargestWord(words));
+}
