@@ -1216,7 +1216,7 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     const numbers = [5, 12, 3, 18, 7];
 
     function getLargestLessThan15(numbers){
-        let largest = numbers[0];
+        let largest = Number.MIN_SAFE_INTEGER;
 
         for(const number of numbers){
             if(number > largest && number < 15){
