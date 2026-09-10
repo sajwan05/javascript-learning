@@ -1073,3 +1073,40 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(isDuplicateNumbers([3, 8, 2, 8, 5]));
     console.log(isDuplicateNumbers([6, 7, 8, 2, 3, 4, 11]));
 }
+
+// Find the largest number in the given array
+
+// Pseudocode :
+// we can sort it out and then return the last value
+
+{
+    function findLargestValue(numbers){
+        numbers.sort((a, b) => a - b);
+
+        return `${numbers[numbers.length - 1]}`;
+    }
+
+    console.log(findLargestValue([4, 9, 2, 7, 5]));
+}
+
+// do not use sort
+// first we will take the smallest value possible 
+// then we will iterate through the array
+// then we will compare each element with this smallest value
+// then we will see we will upate large based on which is large
+
+{
+    function findLargestValue(numbers) {
+        let largest = Number.MIN_SAFE_INTEGER;
+        
+        for(const number of numbers){
+            if(number > largest){
+                largest = number;
+            }
+        }
+
+        return largest;
+    }
+
+    console.log(findLargestValue([4, 9, 2, 7, 5]));
+}
