@@ -1204,3 +1204,29 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(countEvenNumbers(numbers));
 
 }
+
+// Find the largest number that is less than 15
+
+// Pseudocode
+// so first we will have a largest number which will be first element of the array
+// then we will iterate through the array
+// and will compare number to the largest and it number should also be less than 15
+
+{
+    const numbers = [5, 12, 3, 18, 7];
+
+    function getLargestLessThan15(numbers){
+        let largest = numbers[0];
+
+        for(const number of numbers){
+            if(number > largest && number < 15){
+                largest = number;
+            }
+        }
+
+        return largest;
+    }
+
+    console.log(getLargestLessThan15(numbers));
+    
+}
