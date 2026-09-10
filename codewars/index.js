@@ -975,3 +975,101 @@
 
 console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda", "mohito"]));
 }
+
+// Date : 10 September 2026 11:40 AM
+// Pseudocode
+// first we will initialize an empty array
+// then we will iterate through the given array 
+// then we will push elements which are not duplicate to the intialized array
+// then remaining elements we can extract
+{
+    const numbers = [4, 7, 2, 7, 9, 4, 1];
+
+    function getDuplicateNumbers(numbers){
+        const array = [];
+        const arrayOfDuplicates = [];
+
+        for(let i = numbers.length - 1; i >= 0; i--){
+            const value = numbers[i];
+
+            if(!array.includes(value)){
+                array.push(value);
+            }else {
+                arrayOfDuplicates.push(value);
+            }
+        }
+
+        return arrayOfDuplicates;
+    }
+
+    console.log(getDuplicateNumbers(numbers));
+}
+
+{
+    function getDuplicates(numbers){
+        return numbers.sort((a, b) => a - b).filter((item, index) => index !== numbers.indexOf(item));
+    }
+
+    const numbers = [4, 7, 2, 7, 9, 4, 1];
+
+    console.log(getDuplicates(numbers));
+}
+
+
+// Pseudocode :
+// first we will intialize an empty array
+// then we will iterate through the array
+// Then we will iterate from value+1 th index to end of an arrray to find the value
+// if value is found so we will push it to the empty array
+// otherwise we will go to next iteration
+
+{
+    function getDuplicates2(numbers) {
+
+        const duplicates = [];
+
+        for(let i = 0; i < numbers.length; i++){
+            const value = numbers[i];
+
+            for(let j = i + 1; j < numbers.length; j++){
+
+                if(value === numbers[j] && !duplicates.includes(value)){
+                    duplicates.push(value);
+                    break;
+
+                }
+            }
+        }
+
+        return duplicates;
+    }
+
+    const numbersArr = [1, 2, 3, 4, 3, 4, 5, 6, 4, 3, 2, 1, 1 , 4];
+    console.log(getDuplicates2(numbersArr));
+}
+
+// return true if there are duplicates in your array otherwise false
+// Pseudocode: 
+// we can iterate through the array 
+// then we can use inner loop to check duplicates
+// if found true or else false
+
+{
+    function isDuplicateNumbers(numbers){
+
+        for(let i = 0; i < numbers.length; i++){
+            const value = numbers[i];
+
+            for(let j = i + 1; j < numbers.length; j++){
+                if(value === numbers[j]) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    console.log(isDuplicateNumbers([3, 8, 2, 8, 5]));
+    console.log(isDuplicateNumbers([6, 7, 8, 2, 3, 4, 11]));
+}
