@@ -1110,3 +1110,29 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
 
     console.log(findLargestValue([4, 9, 2, 7, 5]));
 }
+
+// find smallest number in the array 
+// Pseudocode:
+// first we will keep first item of array as smallest number so far
+// then we will iterate through the array
+//      and will compare smallest with each number
+//      and if they found number to smaller then smallest then
+//          we will update our smallest 
+// at end we will return it
+{
+    const numbers = [7, 3, 11, 2, 9];
+
+    function findSmallest(numbers){
+        let smallest = numbers[0];
+
+        for(const number of numbers){
+            if(number < smallest){
+                smallest = number;
+            }
+        }
+
+        return smallest;
+    }
+
+    console.log(findSmallest(numbers));
+}
