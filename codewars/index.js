@@ -1179,3 +1179,28 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
 
     console.log(getLargestWord(words));
 }
+
+// count how many numbers are even 
+// Pseudocode :
+// so we will have a count variable
+// then we will iterate through the array
+// then if it is even
+// so we will increment count by 1
+// and will return count at the end
+
+{
+    const numbers = [2, 5, 8, 3, 6];
+
+    function countEvenNumbers(numbers){
+        let count = 0;
+
+        for(const number of numbers){
+            if(number % 2 === 0) count++;
+        }
+
+        return count;
+    }
+
+    console.log(countEvenNumbers(numbers));
+
+}
