@@ -1232,3 +1232,37 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(getLargestLessThan15(numbers));
     
 }
+
+// Interview practice daily 1 question using AI to generate question and validate my pseudocode:
+
+// September 14, 2026
+// How many numbers in an array are even:
+// Pseudocode:
+// First of all we will have a count variable intialized with 0 to count even numbers in array
+// then we will iterate through the array
+// for each item of array we will check
+//      if it is even by modulo operator
+//      if yes
+//          so we will incerement count by 1
+//          otherwise just go to next iteration
+// return count at last
+{
+    function countEven(numbers){
+        let count = 0;
+
+        for(const number of numbers){
+            if(number % 2 === 0) count++;
+        }
+
+        return count;
+    }
+
+    const array = [1, 2, 5, 7, 4, 3, 6, 7];
+
+    console.log(countEven(array));
+    console.log(countEven([2, 4, 6, 8, 10]));
+    console.log(countEven([1, 3, 5, 7, 9]));
+    console.log(countEven([17, 42, 91, 8, 13, 26, 55, 64, 73, 100, 101, 202]));
+    console.log(countEven([0]));
+    console.log(countEven([]));
+}
