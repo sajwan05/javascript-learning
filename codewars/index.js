@@ -1337,3 +1337,33 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(countOccurenceOfLargest([2, 35, 6, 7, 3, 4, 2]));
 
 }
+
+// find the smallest variable in an array
+// so first we will initialize the variable small with first element of the array
+// then we will iterate through the array from index 1
+//          then we will check if small variable value is greater than current item
+//          if yes
+//                  so we will be updating the small to the current item
+// return small variable value
+
+{
+    function getSmallestNumber(array){
+
+        if(array.length < 1) throw Error ("please enter array with atlest 1 item");
+
+        let small = array[0];
+
+        for(let i = 1; i < array.length; i++){
+            let value = array[i];
+
+            if(value < small){
+                small = value;
+            }
+        }
+
+        return small;
+    }
+
+    console.log(getSmallestNumber([7, 3, 9, 2, 5]));
+    console.log(getSmallestNumber([10, -4, 6, 2, -9]));
+}
