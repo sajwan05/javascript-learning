@@ -1296,3 +1296,44 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(findLargestNumber([4, 7, 2, 9, 5]));
     console.log(findLargestNumber([1, 2, 3]));
 }
+
+// Write a function that takes an array of numbers and returns how many time the largest numbers appear in the array
+
+// Pseudocode: 
+// first we will have large and count variable large will be intialized with first element of an array and count will be initialized by 0
+// then we will iterate through the array from index  1 
+//      and check if lage is smaller than current item if yes
+//              we will update the large to the current item
+// then we will finally have large variable
+// then we will again iterate the array 
+//      this time we will check if current item is strictly equal to large which we have if yes
+//              we will increment count by 1
+// return count
+
+{
+    function countOccurenceOfLargest(array){
+        let count = 0;
+        let large = array[0];
+
+        for(let i = 1; i < array.length; i++){
+            const value = array[i];
+
+            if(large < value){
+                large = value;
+            }
+        }
+
+        for(const item of array){
+            if(item === large){
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    console.log(countOccurenceOfLargest([4, 2, 7, 7, 3, 7, 1]));
+    console.log(countOccurenceOfLargest([5, 5, 2, 5, 1]));
+    console.log(countOccurenceOfLargest([2, 35, 6, 7, 3, 4, 2]));
+
+}
