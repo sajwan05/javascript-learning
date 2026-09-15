@@ -1349,7 +1349,7 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
 {
     function getSmallestNumber(array){
 
-        if(array.length < 1) throw Error ("please enter array with atlest 1 item");
+        if(array.length < 1) throw Error ("please enter an array with at least 1 item");
 
         let small = array[0];
 
