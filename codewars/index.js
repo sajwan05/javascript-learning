@@ -1266,3 +1266,33 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(countEven([0]));
     console.log(countEven([]));
 }
+
+// 15 september 2026
+// find the largest element in the given array: 
+// first of all we will have a large variable initialized with first element of given collection
+// then we will iterate through the array from 1st index 
+//      then we will check if large is less than current item in the iteration
+//      if yes 
+//      so update the large to the current item in iteration
+// return large after exiting the loop
+{
+
+    function findLargestNumber(numbers){
+
+        let large = numbers[0];
+
+        for(let i = 1; i < numbers.length; i++){
+            let value = numbers[i];
+
+            if(large < value){
+                large = value;
+            }
+        }
+
+        return large;
+    }
+
+    console.log(findLargestNumber([10, 5, 8, 20, 3]));
+    console.log(findLargestNumber([4, 7, 2, 9, 5]));
+    console.log(findLargestNumber([1, 2, 3]));
+}
