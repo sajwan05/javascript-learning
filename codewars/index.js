@@ -1411,6 +1411,8 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
 {
     function countEvenNumbers(array){
 
+        if(array.length === 0) return 0;
+
         let count = 0;
 
         for(const item of array){
