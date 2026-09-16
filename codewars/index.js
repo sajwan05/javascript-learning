@@ -1424,3 +1424,31 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
 
     console.log(countEvenNumbers([3, 8, 2, 7, 10, 5]));
 }
+
+// count positive numbers in an array:
+// Pseudocode:
+// first of all if input array is empty we will return 0
+// then we will intialize count by 0
+// then we will iterate through the input array
+//      we will check if item is greater than 0
+//          if yes
+//              we will increment count by 1
+// return count
+
+{
+    function countPositiveNumbers(array){
+
+        if(array.length === 0) return 0;
+
+        let count = 0;
+        for(const item of array){
+            if(item > 0){
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    console.log(countPositiveNumbers([3, -2, 7, 0, -5, 9]));
+}
