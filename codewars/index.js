@@ -1452,3 +1452,27 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
 
     console.log(countPositiveNumbers([3, -2, 7, 0, -5, 9]));
 }
+
+// find the first number greater than 10 from on input array
+// Pseudocode:
+// we will start iterating through the array 
+// then we will check if any element is greater than 10
+// if yes so we will return that item/element
+// and if not then we will return undefined
+
+{
+    function findFirstGreaterThanTen(array){
+
+        for(const item of array){
+            if(item > 10){
+                return item;
+            }
+        }
+
+        return undefined;
+    }
+
+    console.log(findFirstGreaterThanTen([5, 6, 7, 8, 9, 10, 11, 12]));
+    console.log(findFirstGreaterThanTen([20, 3, 15, 4, 30]));
+    console.log(findFirstGreaterThanTen([1, -10, -5, -1, 11, 3]));
+}
