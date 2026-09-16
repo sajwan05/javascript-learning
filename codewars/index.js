@@ -1476,3 +1476,23 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(findFirstGreaterThanTen([20, 3, 15, 4, 30]));
     console.log(findFirstGreaterThanTen([1, -10, -5, -1, 11, 3]));
 }
+
+// find the first occurrence. Given an array and a target number, return the index of the first time that target appears. And if it's not there, return minus one.
+
+{
+    function getIndexOfTarget(array, target){
+
+        for(let i = 0; i < array.length; i++){
+            if(array[i] === target) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    console.log(getIndexOfTarget([4, 7, 10, 9], 7));
+    console.log(getIndexOfTarget([10, 5, 3, 8], 8));
+    console.log(getIndexOfTarget([1, 2,3 ,4 ], 9));
+    console.log(getIndexOfTarget([5, 5, 5, 5], 5));
+}
