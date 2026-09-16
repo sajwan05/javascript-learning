@@ -1367,3 +1367,34 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(getSmallestNumber([7, 3, 9, 2, 5]));
     console.log(getSmallestNumber([10, -4, 6, 2, -9]));
 }
+
+// problem solving day 3:
+// return largest numbers from the given array
+// Pseudocode:
+// so first we will initialize large variable with first element of the array
+// then we will iterate through the array from index 1
+//      we will check if currentItem is greater than large varibale value
+//      if yes
+//          so we will update the large variable with currentItem
+// return large variable's value
+
+{
+    function getLargestInArray (array){
+
+        if(array.length < 1) throw Error("Please enter an array with at least one element.");
+        let large = array[0];
+
+        for(let i = 1; i < array.length; i++){
+            const currentItem = array[i];
+
+            if(currentItem > large){
+                large = currentItem;
+            }
+
+        }
+
+        return large;
+    }
+
+    console.log(getLargestInArray([4, 9, 2, 7, 1]));
+}
