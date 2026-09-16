@@ -1398,3 +1398,27 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
 
     console.log(getLargestInArray([4, 9, 2, 7, 1]));
 }
+
+// count even numbers in an given array
+// Pseudocode:
+// so first we will intialize count by 0
+// then we will iterate through the array
+//      then we will check if currentItem is completely divisible by 2 if yes
+//              so we will increment count by 1
+
+// return count
+
+{
+    function countEvenNumbers(array){
+
+        let count = 0;
+
+        for(const item of array){
+            if(item % 2 === 0 ) count++;
+        }
+
+        return count;
+    }
+
+    console.log(countEvenNumbers([3, 8, 2, 7, 10, 5]));
+}
