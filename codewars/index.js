@@ -1527,3 +1527,38 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     // space complexity = O(1)
 }
 
+// Given an array return the largest even number 
+// Pseudocode:
+// so first we will iterate through the array
+// then we will check if currentItem is even
+// if yes
+//  then we will intialize largestEven to that number
+//  then we will check if currentItem > largestEven 
+//  if yes
+//  so we will update largestEven to the currentItem
+// then at last we will return the largestEven
+
+{
+    function findLargestEven(array){
+
+        let foundEven = false;
+        let largestEven = Number.MIN_SAFE_INTEGER;
+
+        for(const item of array){
+            
+            if(item % 2 === 0){
+                foundEven = true;
+                if(item > largestEven){
+                    largestEven = item;
+                }
+            }
+        }
+
+        return foundEven ? largestEven : -1;
+    }
+
+    console.log(findLargestEven([3, 8, 9, 10, 12]));
+    console.log(findLargestEven([21, 8, 14, 18]));
+    console.log(findLargestEven([3, 5, 7, 9]));
+    console.log(findLargestEven([-11, -8, -3, -14]));
+}
