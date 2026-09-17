@@ -1562,3 +1562,31 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(findLargestEven([3, 5, 7, 9]));
     console.log(findLargestEven([-11, -8, -3, -14]));
 }
+
+// okay so 2nd appraoch
+
+{
+    function getLargestEven(array){
+
+        let foundEven = false;
+        let largestEven;
+
+        for(const item of array){
+            if(item % 2 === 0 && foundEven === false){
+                largestEven = item;
+                foundEven = true;
+            }else if(item % 2 === 0){
+                    if(item > largestEven) {
+                    largestEven = item;
+                }
+            }
+        }
+
+        return foundEven ? largestEven : -1;
+    }
+
+    console.log(getLargestEven([3, 8, 9, 10, 12]));
+    console.log(getLargestEven([21, 8, 14, 18]));
+    console.log(getLargestEven([3, 5, 7, 9]));
+    console.log(getLargestEven([-11, -8, -3, -14]));
+}
