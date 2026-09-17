@@ -1496,3 +1496,34 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(getIndexOfTarget([1, 2,3 ,4 ], 9));
     console.log(getIndexOfTarget([5, 5, 5, 5], 5));
 }
+
+// find how many times the given target appears in the array and return count.
+// Pseudocode:
+// first of all we will have a count variable intialized with 0
+// then we will iterate through the array
+//      and will check if currentItem is strictly equal to target, if yes
+//              we will increment count by one
+// return count
+
+{
+    function getCountTarget(array, target){
+
+        if(array.length === 0) return 0;
+
+        let count = 0;
+
+        for(const item of array){
+            if(item === target) count++;
+        }
+
+        return count;
+    }
+
+    console.log(getCountTarget([4, 7, 2, 7, 9, 7], 7));
+    console.log(getCountTarget( [5, 5, 3, 5, 1], 5));
+    console.log(getCountTarget([1, 2, 3, 4], 9));
+
+    // time complexity = O(n)
+    // space complexity = O(1)
+}
+
