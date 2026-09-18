@@ -1637,5 +1637,40 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(findSecondLargest([4, 9, 2, 9, 7, 4, 8]));
 }
 
+// given an array of numbers, find the first number that appears more than once. and return that number 
+// Pseudocode:
+// so first we will have an empty array
+// then we will iterate through the given array
+//      then we will check if empty array doesn't have currentItem if it doesn't
+//              so we will push it to the empty array
+//      otherwise if it already have it
+//              we will return the item
+
+{
+    function findFirstDuplicates(array){
+
+        const isDuplicates = [];
+
+        for(const number of array){
+            if(!isDuplicates.includes(number)){
+                isDuplicates.push(number);
+            }else {
+                return number;
+            }
+        }
+
+        return -1;
+    }
+
+    console.log(findFirstDuplicates([4, 7, 3, 7, 4, 6]));
+    console.log(findFirstDuplicates([4, 7, 2, 7, 9]));
+    console.log(findFirstDuplicates([]));
+    console.log(findFirstDuplicates([1]));
+    console.log(findFirstDuplicates([2, 1]));
+    console.log(findFirstDuplicates([2, 1, 2]));
+    console.log(findFirstDuplicates([3, 5, 3, 5]));
+    console.log(findFirstDuplicates([9, 9]));
+}
+
 
 
