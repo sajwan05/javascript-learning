@@ -1590,3 +1590,52 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(getLargestEven([3, 5, 7, 9]));
     console.log(getLargestEven([-11, -8, -3, -14]));
 }
+
+// 18 september 2026 8:45 AM 
+// given an array return second largest number from an array
+
+// Pseudocode:
+// so first of all we will have two variable to keep track of largest and secondLargest
+// then we will iterate through the array
+//      then we will check if item is greater than largest if yes
+//              so we will update secondLargest to largest and
+//              largest to item
+//      otherwise we will check if item is less than largest but item is greater than secondLargest if yes
+//               so we will update secondLargest to item
+// then at last we will return second largest 
+
+{
+    function findSecondLargest(array){
+
+        let currentLargest = Number.MIN_SAFE_INTEGER;
+        let secondLargest = Number.MIN_SAFE_INTEGER;
+
+        for(const currentItem of array){
+
+            if(currentItem > currentLargest){
+                secondLargest = currentLargest;
+                currentLargest = currentItem;
+            }else if (currentItem < currentLargest && 
+                    currentItem > secondLargest
+            ){
+                secondLargest = currentItem;
+            }
+        }
+
+        return (secondLargest === Number.MIN_SAFE_INTEGER) ?
+                -1 :
+                secondLargest;
+
+    }
+
+    console.log(findSecondLargest([10, 5, 8, 20, 15]));
+    console.log(findSecondLargest([4, 9, 2, 7]));
+    console.log(findSecondLargest([10, 15]));
+    console.log(findSecondLargest([20, 10, 5, 8]));
+    console.log(findSecondLargest([10, 20, 20, 15, 5]));
+    console.log(findSecondLargest([-10, -5, -20, -8, -15]));
+    console.log(findSecondLargest([4, 9, 2, 9, 7, 4, 8]));
+}
+
+
+
