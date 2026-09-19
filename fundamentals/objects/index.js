@@ -168,3 +168,18 @@
     console.log(human.age);
     console.log(human.name);
 }
+
+// Property names limitations
+// there are no restriction even you can use reserved words
+
+{
+    let obj = {
+        for: 1, 
+        let: 2, 
+        return: 3
+    }
+
+    console.log(obj.for + obj.let === obj.return);
+
+    console.log(obj.for + obj.let + obj.return);
+}
