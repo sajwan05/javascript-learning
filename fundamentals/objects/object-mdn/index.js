@@ -123,5 +123,57 @@
 
     console.log(person);
 
+    // person["name"]["last"] = "Crachit";
+}
+
+// Setting object members
+
+{
+    const person = {
+        name: "John",
+        age: 32,
+    };
+
+    console.log(person);
+
+    person.age = 45
+    console.log(person);
+
     person["name"]["last"] = "Crachit";
+
+    console.log(person);
+
+    console.log(person["name"]);
+    console.log(person["age"]);
+    console.log(person["name"]["last"]);
+
+
+}
+
+// Setting object members
+
+{
+    const person = {
+        age: 32,
+        name: {
+            first: "John",
+        }
+    }
+
+    console.log(person);
+    person.age = 45;
+    person["name"]["last"] = "Crachit"
+
+    console.log(person.age);
+    console.log(person["name"]["first"]);
+
+    person["eyes"] = "hazel";
+    person.farewell = function () {
+        console.log("Bye everybody!");
+    }
+
+    console.log(person);
+
+    console.log(person.farewell());
+    console.log(person["farewell"]());
 }
