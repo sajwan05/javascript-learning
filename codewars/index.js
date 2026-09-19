@@ -1702,5 +1702,33 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(findSmallestPositive([0, -3, 4, 0, 2]));
 }
 
+// Problem: Move Zeros to the End
+// Pseudocode: 
+// so first of all we will iterate through the input array backwards
+//      and will check if currItem is equal to zero if yes
+//              we will splice at that index and then would push that removed item to array 
+// we will return mutated array at last
+
+{
+    function moveZeroesToEnd(array){
+
+        for(let i = array.length - 1; i >= 0; i--){
+
+            if(array[i] === 0){
+               const removedZero = array.splice(i, 1);
+               array.push(removedZero[0]);
+            }
+        }
+
+        return array;
+    }
+
+    console.log(moveZeroesToEnd([0, 1, 0, 3, 12]));
+    console.log(moveZeroesToEnd([1, 0, 2, 0, 3]));
+    console.log(moveZeroesToEnd([0, 0, 0]));
+    console.log(moveZeroesToEnd([1, 2, 3]));
+    
+}
+
 
 
