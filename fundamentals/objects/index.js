@@ -236,3 +236,75 @@
     console.log("name" in obj);
 
 }
+
+// The for...in loop
+// syntax:
+/*
+    for(key in object) {
+        // executes the body for each key among object properties
+    }
+*/ 
+
+{
+    let user = {
+        name: "John", 
+        age: 30, 
+        isAdmin: true,
+    };
+
+    for (let key in user){
+        console.log(key);
+
+        console.log(user[key]);
+    }
+
+    let codes = {
+        "49": "Germany",
+        "41": "Switzerland",
+        "44": "Great Britain",
+        "91": "India",
+        "1": "USA",
+    };
+
+    for(const countryCode in codes){
+        console.log(countryCode);
+
+        console.log(codes[countryCode]);
+    }
+
+
+}
+
+{
+    // if the keys are non-integer, then they are listed in the creation order, for instance:
+
+    {
+        let user ={
+            name: "John", 
+            surname: "Smith",
+        };
+
+        user.age = 25;
+        user.gf = "Rose";
+
+        for(let prop in user){
+            console.log(prop);
+            console.log(user[prop]);
+        }
+    }
+}
+
+{
+    let codes = {
+        "+49": "Germany",
+        "+41": "Switzerland",
+        "+44": "Great Britain",
+
+        "+1": "USA"
+    }
+
+    for(let code in codes){
+        console.log(code);
+        console.log(codes[code]);
+    }
+}
