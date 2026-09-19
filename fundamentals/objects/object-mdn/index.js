@@ -31,3 +31,26 @@
     console.log(person.bio());
     console.log(person.introduceSelf());
 }
+
+// Objects as object properties
+
+{
+    const person = {
+        name: {
+            first: "Bob",
+            last: "Smith",
+        },
+        age: 32,
+
+        bio() {
+            console.log(`${this.name.first} ${this.name.last} is ${this.age} years old.`);
+        },
+
+        introduceSelf() {
+            console.log(`I'm ${this.name.first}`);
+        }
+    }
+
+    console.log(person.bio());
+    console.log(person.introduceSelf());
+}
