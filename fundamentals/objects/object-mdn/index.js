@@ -54,3 +54,40 @@
     console.log(person.bio());
     console.log(person.introduceSelf());
 }
+
+// Bracket notation 
+
+{
+     const person = {
+        name: {
+            first: "Bob",
+            last: "Smith",
+        },
+        age: 32,
+
+        bio() {
+            console.log(`${this.name.first} ${this.name.last} is ${this.age} years old.`);
+        },
+
+        introduceSelf() {
+            console.log(`I'm ${this.name.first}`);
+        }
+    }
+
+    console.log(person["name"]["first"]);
+    console.log(person["bio"]());
+}
+
+{
+    const person = {
+        name: ["Bob", "Smith"],
+        age: 32,
+    };
+
+    function logProperty(propertyName) {
+        console.log(person[propertyName]);
+    }
+
+    logProperty("name");
+    logProperty("age");
+}
