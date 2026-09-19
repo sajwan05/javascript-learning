@@ -82,11 +82,29 @@
         name: "John", 
         age: 30,
     }
-    
+
     console.log(user);
 
     user[key] = true;
 
 
     console.log(user);
+}
+
+
+{
+
+   
+    let user = {
+        name: "John",
+        age: 30,
+        gf: "Rose",
+        salary: "2k$ per month",
+    }
+     let key = "salary";
+
+    // let key = prompt("What do you want to know about the user:", name);
+    console.log(user[key]);
+
+    // dot notation can not be used in similar way
 }
