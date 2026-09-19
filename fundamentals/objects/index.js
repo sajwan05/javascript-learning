@@ -202,3 +202,37 @@
 
     console.log(obj);
 }
+
+// Property existence test, "in" operator
+{
+    let user = {};
+
+    console.log(user.noSuchProperty === undefined);
+}
+
+{
+    let user = {
+        name: "John",
+        age:30,
+    }
+
+    console.log(user);
+    console.log("age" in user);
+    console.log("name" in user);
+    console.log("tel" in user);
+
+    let key = "name";
+
+    console.log(key in user);
+}
+
+{
+    let obj = {
+        test:undefined
+    };
+    console.log(obj.test);
+    // console.log(obj["test"]);
+    console.log("test" in obj);
+    console.log("name" in obj);
+
+}
