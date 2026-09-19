@@ -1672,5 +1672,35 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(findFirstDuplicates([9, 9]));
 }
 
+// Given an array of numbers, find the smallest +ve number in the array
+// Pseudocode:
+// so first of all we will have a variable currentSmallest
+// then we will iterate through the input array
+//      and will check if currentItem is greater than zero and it is smaller than current smallest 
+//              so we will update the currentSmallest
+// and at last we will return currentSmallest
+{
+
+    function findSmallestPositive(array){
+
+        let currentSmallest = Number.MAX_SAFE_INTEGER;
+
+        for(const currentItem of array){
+            
+            if(currentItem > 0 && currentItem < currentSmallest){
+                currentSmallest = currentItem;
+            }
+        }
+
+        return (currentSmallest == Number.MAX_SAFE_INTEGER) ?
+                -1 : currentSmallest;
+    }
+
+    console.log(findSmallestPositive([4, -2, 7, 1, -5, 3]));
+    console.log(findSmallestPositive([-4, -2, -7]));
+    console.log(findSmallestPositive([5, 2, 8, 3]));
+    console.log(findSmallestPositive([0, -3, 4, 0, 2]));
+}
+
 
 
