@@ -183,3 +183,22 @@
 
     console.log(obj.for + obj.let + obj.return);
 }
+
+{
+    let obj = {
+        0: "test",
+    };
+
+    console.log(obj["0"]);
+    console.log(obj[0]);
+}
+
+// There is a minor gotcha with a special property named _proto_ . We can't set it to a non-object value:
+{
+    let obj = {};
+    obj.__proto__= 5;//can't set it to non-object value
+
+    console.log(obj.__proto__);
+
+    console.log(obj);
+}
