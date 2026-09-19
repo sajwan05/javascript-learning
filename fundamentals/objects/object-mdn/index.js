@@ -90,4 +90,38 @@
 
     logProperty("name");
     logProperty("age");
+
+   
+}
+
+// Setting object members
+{
+    const person = {
+        name: {
+            first: "Bob", 
+            last: "Smith",
+        },
+
+        age: 32,
+    }
+
+    console.log(person);
+
+    person.age = 45;
+    person["name"]["first"]["last"] = "Cratchit";
+
+    console.log(person)
+    console.log(person.age);
+    
+    
+}
+
+{
+    const person = {};
+
+    person.age = 45;
+
+    console.log(person);
+
+    person["name"]["last"] = "Crachit";
 }
