@@ -134,3 +134,37 @@
     console.log(bag);
     console.log(bag.appleComputers);
 }
+
+// Property value shorthand
+
+{
+    function makeUser(name, age) {
+        return {
+            name: name,
+            age: age,
+            //... other properties
+        };
+    }
+
+    let user = makeUser("John", 30);
+
+    console.log(user);
+
+}
+
+// shorthand
+
+{
+    function makeHuman(name, age){
+    return {
+        name,
+        age,
+    }
+}
+
+    let human = makeHuman("John", 31);
+
+    console.log(human);
+    console.log(human.age);
+    console.log(human.name);
+}
