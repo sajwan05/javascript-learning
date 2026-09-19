@@ -108,3 +108,29 @@
 
     // dot notation can not be used in similar way
 }
+
+// computed properties:
+
+{
+    // let fruit = prompt("Which fruit to buy?", "apple");
+
+    let fruit = "apple";
+
+    let bag = {
+        [fruit]: 5,
+    };
+
+    console.log(bag);
+    console.log(bag.apple);
+}
+
+{
+    let fruit = "apple";
+
+    let bag = {
+        [fruit + "Computers"] : 5,
+    };
+
+    console.log(bag);
+    console.log(bag.appleComputers);
+}
