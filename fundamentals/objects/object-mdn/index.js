@@ -177,3 +177,49 @@
     console.log(person.farewell());
     console.log(person["farewell"]());
 }
+
+// Setting object members 
+
+{
+    // When met p
+    const person = {
+        age: 25, 
+        name: {
+            first: "Suraj",
+        },
+    }
+
+    console.log(person);
+    // persent
+
+    person.age = 27;
+    person["name"]["last"] = "Sajwan";
+    person["gf"] = true;
+    person.eyes = "Black";
+
+    console.log(person);
+
+    person.farewell = function () {
+        console.log("Bye Everybody!");
+    };
+
+    person.getJob = function(){
+        console.log("Will get job > 50k per month by July 2027");
+    };
+
+    console.log(person["name"]["last"]);
+    console.log(person.name["first"]);
+
+    console.log(person.getJob());
+    console.log(person.gf);
+    console.log(person["farewell"]());
+
+    const myDataName = "height";
+    const myDataValue = "1.73m";
+
+    person[myDataName] = myDataValue;
+
+    console.log(person["height"]);
+    console.log(person.height);
+    console.log(person);
+}
