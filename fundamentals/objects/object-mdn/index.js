@@ -223,3 +223,38 @@
     console.log(person.height);
     console.log(person);
 }
+
+// What is "this"?
+
+{
+    const person = {
+        name: "Suraj",
+        age: 27,
+        gf: true,
+
+        introduceSelf(){
+            console.log(`I'm ${this["name"]}`);
+        },
+    }
+
+    console.log(person.introduceSelf());
+}
+
+{
+    const person1 = {
+        name: "Suraj",
+        introduceSelf() {
+            console.log(`I'm ${this.name}.`);
+        },
+    }
+
+    const person2 = {
+        name: "Pri",
+        introduceSelf: function () {
+            console.log(`I'm ${this["name"]}. I am successful women and gf of ${person1.name}.`);
+        }
+    }
+
+    console.log(person1.introduceSelf());
+    console.log(person2.introduceSelf());
+}
