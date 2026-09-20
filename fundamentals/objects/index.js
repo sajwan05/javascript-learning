@@ -308,3 +308,63 @@
         console.log(codes[code]);
     }
 }
+
+// when you define an primitive it will contain a copy of information provided to it: 
+{
+    let data = 42;
+
+    let dataCopy = data;
+
+    dataCopy = 43;
+
+    console.log(dataCopy);
+    console.log(data);
+}
+
+// When you define an object variable, it will contain a reference to the object provided to it:
+
+{
+    const obj = {data: 42};
+    // obj contains a reference to the object we defined on the right side
+
+    const objCopy = obj;
+    // objCopy will contain a reference to the object referenced by obj
+
+    objCopy.data = 43;
+    // making changes to objCopy will make changes to the object that it refers to
+
+    console.log(obj);
+    console.log(objCopy);
+}
+
+{
+    function increaseCounterObject(objectCounter) {
+        objectCounter.counter += 1;
+    }
+
+    function increaseCounterPrimitive(primitiveCounter) {
+        primitiveCounter += 1;
+    }
+
+    const object = {counter : 0};
+    let primitive = 0;
+
+    increaseCounterObject(object);
+    increaseCounterPrimitive(primitive);
+
+    console.log(object);
+    console.log(primitive);
+}
+
+// Reassigning object data type variables
+
+{
+    let animal = {species: "dog"};
+    let dog = animal;
+
+    // reassigning animal variable with complete new object
+    animal = {species: "cat"};
+
+    console.log(animal);
+    console.log(dog);
+}
