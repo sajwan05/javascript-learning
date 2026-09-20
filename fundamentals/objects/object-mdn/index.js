@@ -258,3 +258,8 @@
     console.log(person1.introduceSelf());
     console.log(person2.introduceSelf());
 }
+
+{
+    const myNotification = new Notification("Hello");
+    alert(myNotification.title);
+}
