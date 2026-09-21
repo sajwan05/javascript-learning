@@ -1905,3 +1905,53 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
 
     console.log(getNames(users));
 }
+
+// Map to objects
+
+{
+    let john = { name: "John", surname: "Smith", id: 1 };
+    let pete = { name: "Pete", surname: "Hunt", id: 2 };
+    let mary = { name: "Mary", surname: "Key", id: 3 };
+
+    let users = [ john, pete, mary ];
+
+    let usersMapped = [];
+
+    for(let i = 0; i < users.length; i++){
+        let user = users[i];
+
+        let fullName = `${user.name} ${user.surname}`;
+        let id = user.id;
+
+        usersMapped.push({fullName, id});
+
+
+    }
+
+    console.log(usersMapped);
+    // console.log( usersMapped[0].id )
+    console.log( usersMapped[0].fullName );
+    console.log(usersMapped[0].id);
+}
+
+{
+    let john = { name: "John", surname: "Smith", id: 1 };
+    let pete = { name: "Pete", surname: "Hunt", id: 2 };
+    let mary = { name: "Mary", surname: "Key", id: 3 };
+
+    let users = [ john, pete, mary ];
+
+    let usersMapped = users.map((item) => {
+        let fullName = `${item.name} ${item.surname}`;
+
+        let id = `${item.id}`;
+
+        return {fullName, id};
+    });
+
+    console.log(usersMapped);
+
+    // console.log( usersMapped[0].id )
+    console.log( usersMapped[0].fullName );
+    console.log(usersMapped[0].id);
+}
