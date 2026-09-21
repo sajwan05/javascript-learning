@@ -1806,3 +1806,34 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(countVowels("a1e2i3o4u5"));
     console.log(countVowels("beautiful"));
 }
+
+// reverse the given string
+// Pseudocode
+// we will have intialize an empty string
+// then we will iterate through the string backwards
+//      then for each character we will concatenate it to the variable (empty) above
+// at last we will return the variable which is containing reversed String
+
+{
+    function reverseString(string){
+
+        if(typeof string !== "string") throw new Error("Please enter valid string");
+
+        let reversedString = "";
+
+        for(let i = string.length - 1; i >= 0; i--){
+            reversedString += string[i];
+        }
+
+        return reversedString;
+    }
+
+    console.log(reverseString("hello"));
+    console.log(reverseString("javascript"));
+    console.log(reverseString("a"));
+    console.log(reverseString(""));
+    console.log(reverseString("12345"));
+    console.log(reverseString("hello world"));
+    console.log(reverseString("a b c"));
+    console.log(reverseString("racecar"));
+}
