@@ -1955,3 +1955,22 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log( usersMapped[0].fullName );
     console.log(usersMapped[0].id);
 }
+
+// Map to objects
+{
+    let john = { name: "John", surname: "Smith", id: 1 };
+    let pete = { name: "Pete", surname: "Hunt", id: 2 };
+    let mary = { name: "Mary", surname: "Key", id: 3 };
+
+    let users = [ john, pete, mary ];
+
+    let userMapped = users.map((item) => ({
+        fullName: `${item.name} ${item.surname}`,
+        id: item.id,
+    }));
+
+    console.log(userMapped);
+
+    console.log(userMapped[2].fullName);
+    console.log(userMapped[1]["id"]);
+}
