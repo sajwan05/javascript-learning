@@ -1772,4 +1772,37 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(countOcuurenceOfTarget([], 4));
 }
 
+// given an string count occurences of vowel in an array
+// Pseudocode:
+// first of all we will have countVowel initialized with 0
+// then we will iterate through the string
+//         then we will use logical operator OR to check if currentItem is vowel if yes 
+//              so we will increment countVowel by 1
+// at last we will return the countVowel
+{
+    function countVowels(str){
 
+        let countVowel = 0;
+
+        for(let item of str){
+            item = item.toLowerCase();
+
+            if(item === "a" || item === "e" || 
+                item === "i" || item === "o" ||
+                item === "u"
+            ){
+                countVowel++;
+            }
+        }
+
+        return countVowel ? countVowel : 0;
+    }
+
+    console.log(countVowels("hello"));
+    console.log(countVowels("javascript"));
+    console.log(countVowels("aeiou"));
+    console.log(countVowels("HELLO"));
+    console.log(countVowels("xyz"));
+    console.log(countVowels("a1e2i3o4u5"));
+    console.log(countVowels("beautiful"));
+}
