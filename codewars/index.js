@@ -1730,5 +1730,46 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     
 }
 
+// 20 September 2026
+
+// Map to names
+// You have an array of user objects, each one has user.name. Write the code that converts it into an array of names.
+
+// Sunday
+
+// 21september 2026
+
+// find occurences of target element in an input array fn([1, 3, 4, 5, 3,4 ], 3) => 2
+// Pseudocode:
+// first we will have a count variable intialized with 0, to count number of times target appears
+// then we will iterate through the array
+//          then we will check if currentItem is strict equal to target if yes
+//                  we will increment count by 1
+//          otherwise
+//                  we will move to next element
+// and at last we will return the count
+
+{
+    function countOcuurenceOfTarget(array, target){
+
+        if(array.length === 0) return 0;
+
+        let count = 0;
+
+        for(const item of array){
+
+            if(item === target){
+                count ++;
+            }
+        }
+
+        return count;
+    }
+
+    console.log(countOcuurenceOfTarget([1, 2, 2, 3, 2], 2));
+    console.log(countOcuurenceOfTarget([5, 5, 1, 5, 2], 5));
+    console.log(countOcuurenceOfTarget([1, 2, 3], 7));
+    console.log(countOcuurenceOfTarget([], 4));
+}
 
 
