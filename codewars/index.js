@@ -1994,3 +1994,21 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(arr[1].name);
     console.log(arr[2].name);
 }
+
+// Get average age
+
+{
+    let john = { name: "John", age: 25 };
+    let pete = { name: "Pete", age: 30 };
+    let mary = { name: "Mary", age: 29 };
+
+    let arr = [ john, pete, mary ];
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++){
+        sum += arr[i]["age"];
+    }
+
+    let averageAge = (sum / arr.length);
+
+    console.log(averageAge);
+}
