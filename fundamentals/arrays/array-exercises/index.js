@@ -71,3 +71,43 @@ const inventors = [
     let firstAndLastNames = inventors.map((inventor) => `${inventor.first} ${inventor.last}`);
     console.log(firstAndLastNames);
 }
+
+// Sort the inventor by birthdaye, oldest to shortest
+
+{
+    const sortedArr = inventors.sort((a, b) => {
+        if(a.year > b.year) {
+            return 1;
+        }else {
+            return -1;
+        }
+    });
+
+    console.log(sortedArr);
+}
+
+{
+    const sortedArr = inventors.sort((a, b) => a.year - b.year);
+}
+
+// How many years did all the inventors live all together
+
+{
+    const commulatativeYears = inventors.reduce((total, inventor) => total + (inventor.passed - inventor.year) , 0);
+
+    console.log(commulatativeYears);
+}
+
+// sort the inventors by years lived: 
+
+{
+    const yearsLivedMaximumtoLowest = inventors.sort((a, b) => {
+        if((a.passed - a.year ) > (b.passed - b.year)) {
+            return -1;
+        }else {
+            return 1;
+        }
+    });
+
+    console.log(yearsLivedMaximumtoLowest);
+}
