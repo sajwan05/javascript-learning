@@ -1837,3 +1837,31 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(reverseString("a b c"));
     console.log(reverseString("racecar"));
 }
+
+// Check if an array is sorted in ascending order, return true if it is else false
+
+// Pseudocode:
+// we will iterate through the array from index 1
+//      so we will check if previous element is greater than currentItem /element if yes
+//      return false
+// if you condition never becomes true we will return true after end of the loop
+
+{
+    function isSortedAscending(array){
+
+        for(let i = 1; i < array.length; i++){
+            if(array[i - 1] > array[i]){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    console.log(isSortedAscending([1, 2, 3, 4, 5]));
+    console.log(isSortedAscending([1, 2, 2, 3, 4]));
+    console.log(isSortedAscending([1, 3, 2, 4]));
+    console.log(isSortedAscending([5, 4, 3, 2, 1]));
+    console.log(isSortedAscending([1]));
+    console.log(isSortedAscending([]))
+}
