@@ -1865,3 +1865,43 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(isSortedAscending([1]));
     console.log(isSortedAscending([]))
 }
+
+// Map to names
+// You have an array of user objects, each one has user.name. Write the code that converts it into an array of names.
+// we can use maps
+
+{
+    let john = { name: "John", age: 25 };
+    let pete = { name: "Pete", age: 30 };
+    let mary = { name: "Mary", age: 28 };
+
+    let users = [john, pete, mary];
+    console.log(users);
+    let names = users.map((item) => item.name);
+    console.log(names);
+}
+// Without using methods
+
+{
+    let john = { name: "John", age: 25 };
+    let pete = { name: "Pete", age: 30 };
+    let mary = { name: "Mary", age: 28 };
+
+    let users = [john, pete, mary];
+
+    function getNames(array){
+
+        const namesArray = [];
+
+        for(let i = 0; i < array.length; i++){
+            const value = array[i];
+
+            namesArray.push(value["name"]);
+
+        }
+
+        return namesArray;
+    }
+
+    console.log(getNames(users));
+}
