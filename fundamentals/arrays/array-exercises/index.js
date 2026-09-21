@@ -44,3 +44,30 @@ const inventors = [
 
     console.log(fifteenthCenturyBorn);
 }
+
+// Give us array of the inventors first and last names
+
+{
+    let firstAndLastNames = [];
+
+    for(let i = 0; i < inventors.length; i++){
+        firstAndLastNames.push(inventors[i].first, inventors[i].last);
+    }
+
+    console.log(firstAndLastNames);
+}
+
+{
+    let firstAndLastNames = [];
+
+    for(const inventor of inventors){
+        firstAndLastNames.push(inventor.first, inventor.last);
+    }
+
+    console.log(firstAndLastNames);
+}
+
+{
+    let firstAndLastNames = inventors.map((inventor) => `${inventor.first} ${inventor.last}`);
+    console.log(firstAndLastNames);
+}
