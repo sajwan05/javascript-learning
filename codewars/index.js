@@ -2012,3 +2012,67 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
 
     console.log(averageAge);
 }
+
+// Create keyed object from array
+
+{
+    let users = [
+        {id: 'john', name: "John Smith", age: 20},
+        {id: 'ann', name: "Ann Smith", age: 24},
+        {id: 'pete', name: "Pete Peterson", age: 31},
+    ];
+
+    function groupById(array){
+        
+        let userById = {};
+
+        for(let i = 0; i < array.length; i++){
+            const user = array[i];
+
+            let userId = `${user.id}`;
+
+            userById[userId] = user;
+        }
+
+        return userById;
+    }
+
+    console.log(groupById(users));
+}
+
+// with reduce method
+
+{
+    let users = [
+        {id: 'john', name: "John Smith", age: 20},
+        {id: 'ann', name: "Ann Smith", age: 24},
+        {id: 'pete', name: "Pete Peterson", age: 31},
+    ];
+
+    function groupById(users){
+        return users.reduce((final, currentItem) => final["id"] = currentItem, {});
+    }
+
+    let userById = groupById(users);
+    console.log(userById);
+}
+
+{
+     let users = [
+        {id: 'john', name: "John Smith", age: 20},
+        {id: 'ann', name: "Ann Smith", age: 24},
+        {id: 'pete', name: "Pete Peterson", age: 31},
+    ];
+
+    function groupById(array){
+
+        return array.reduce((obj, members) => {
+            obj[members["id"]] = members;
+            return obj;
+        }, {});
+
+    }
+
+    let usersById = groupById(users);
+    console.log(usersById);
+}
