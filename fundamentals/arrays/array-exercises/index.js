@@ -121,3 +121,31 @@ const people = [
     ];
 
 // sort the people alphabetically by last names
+
+const sortByLastName = people.sort((lastOne, nextOne) => {
+    const [aLast, aFirst] = lastOne.split(", ");
+    const [bLast, bFirst] = nextOne.split(", ");
+
+    if(aLast > bLast) {
+        return 1;
+    }else {
+        return -1;
+    }
+});
+
+console.table(sortByLastName);
+
+// Sum up instances of each of these
+
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+const transportation = data.reduce((obj, value) => {
+    if(!obj[value]){
+        obj[value] = 0;
+    }
+
+    obj[value]++;
+    return obj;
+}, {});
+
+console.log(transportation);
