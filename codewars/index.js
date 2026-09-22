@@ -2110,4 +2110,21 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(findFirstDuplicate([1, 2, 3, 2, 1]));
 }
 
+// Find the sum of all numbers in an array.
 
+{
+    function sumArray(array){
+        let total = 0;
+
+        for(const item of array){
+            total += item;
+        }
+
+        return total;
+    }
+
+    console.log(sumArray([1, 2, 3, 4, 5]));
+    console.log(sumArray([10, 20, 30]));
+    console.log(sumArray([5]));
+    console.log(sumArray([]));
+}
