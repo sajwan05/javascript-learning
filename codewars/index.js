@@ -2114,6 +2114,7 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
 
 {
     function sumArray(array){
+
         let total = 0;
 
         for(const item of array){
@@ -2127,4 +2128,38 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(sumArray([10, 20, 30]));
     console.log(sumArray([5]));
     console.log(sumArray([]));
+}
+
+// Given two arrays, find the elements that appear in both arrays.
+
+// Pseudocode:
+// so first of all we will have result array for common elements we will intialize it with empty array
+// then we will iterate through one array
+//         and will check if second array includes any current item if yes and if it is already not availble in resultant array 
+//              then we will push it in result array
+// we will return the resultant array at last 
+
+{
+    function findCommonElements(array1, array2){
+
+        const result = [];
+
+        for(const item of array1){
+
+            if(array2.includes(item) && !result.includes(item)){
+                result.push(item);
+            }
+
+        }
+
+        return result;
+    }
+
+    console.log(findCommonElements([1, 2, 3, 4], [3, 4, 5, 6]));
+    console.log(findCommonElements([1, 2, 3], [4, 5, 6]));
+    console.log(findCommonElements([],[1, 2, 3]));
+    console.log(findCommonElements([1, 2, 3],[]));
+    console.log(findCommonElements([1, 2, 2, 3],[2, 4, 2]));
+    console.log(findCommonElements( [1, 2, 3],[1, 2, 3]));
+    console.log(findCommonElements([1, 1, 2, 2, 3, 3], [2, 2, 3, 3, 4]));
 }
