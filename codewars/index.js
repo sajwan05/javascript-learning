@@ -2076,3 +2076,38 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     let usersById = groupById(users);
     console.log(usersById);
 }
+
+// 22 september 2026
+// Given an array of numbers, return the first value that appears more than once.
+// Pseudocode:
+// so first of all we will initialize our new empty array
+// then we will iterate through the input array
+//      and will check if currentItem is not available in new array so we will push it into new array
+//      otherwise if it is already availble then and there we will just return the currentItem
+// we will return -1 if no duplicates are found
+
+{
+    function findFirstDuplicate(array){
+
+        const duplicateChecks = [];
+
+        for(const item of array){
+            
+            if(duplicateChecks.includes(item)){
+                return item;
+            }else {
+                duplicateChecks.push(item);
+            }
+        }
+
+        return -1;
+        
+    }
+
+    console.log(findFirstDuplicate([2, 1, 3, 5, 3, 2]));
+    console.log(findFirstDuplicate([1, 2, 3, 4]));
+    console.log(findFirstDuplicate([5, 5, 1, 2]));
+    console.log(findFirstDuplicate([1, 2, 3, 2, 1]));
+}
+
+
