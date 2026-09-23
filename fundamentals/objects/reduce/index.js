@@ -145,4 +145,46 @@ console.log(countOfFruits);
 
 }
 
+// Level 3.5 
+/*
+    {
+        apple: 6,
+        banana: 7,
+        orange: 3,
+    }
+*/ 
+
+{
+    const orders = [
+        { product: "apple", quantity: 2 },
+        { product: "banana", quantity: 5 },
+        { product: "apple", quantity: 4 },
+        { product: "orange", quantity: 3 },
+        { product: "banana", quantity: 2 }
+    ];
+
+    const quantityOfFruits = orders.reduce((acc, fruit) => {
+        if(!acc[fruit.product]){
+            acc[fruit.product] = 0;
+        }
+
+        acc[fruit.product] += fruit.quantity;
+
+        return acc;
+    }, {});
+
+    console.log(quantityOfFruits);
+
+    const numberOfFruits = orders.reduce((acc, fruit) => {
+        if(!acc[fruit.product]){
+            acc[fruit.product] = fruit.quantity;
+        }else {
+            acc[fruit.product] += fruit.quantity;
+        }
+
+        return acc;
+    }, {});
+
+    console.log(numberOfFruits);
+}
 
