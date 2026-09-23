@@ -2163,3 +2163,85 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(findCommonElements( [1, 2, 3],[1, 2, 3]));
     console.log(findCommonElements([1, 1, 2, 2, 3, 3], [2, 2, 3, 3, 4]));
 }
+
+// Reverse an array in place without using reverse method
+// Pseudocode: 
+// So we will iterate through the input array until left is less then right
+// then we will initialize left at 0th index or maybe i can be left and we will intialize right by last index
+//      then for each iteration we will swap values of left and right index 
+//      then we will increment left and decrement right
+// return the array;
+
+{
+    function reverseArrayInPlace(array){
+
+        for(let left = 0,right = array.length - 1; left < right; left++, right-- ){
+            let temp = array[right];
+            array[right] = array[left];
+            array[left] = temp;
+        }
+
+        return array;
+    }
+
+    console.log(reverseArrayInPlace([1, 2, 3, 4, 5]));
+    console.log(reverseArrayInPlace([1, 2, 3, 4]));
+    console.log(reverseArrayInPlace([10, 20]));
+    console.log(reverseArrayInPlace([7]));
+    console.log(reverseArrayInPlace([]));
+    console.log(reverseArrayInPlace([-1, -2, -3, -4]));
+    console.log(reverseArrayInPlace([1, 2, 2, 3, 1]));
+    
+}
+
+{
+    function reverseInPlaceNow(array){
+
+        for(let left = 0, right = array.length - 1; left < right; left++, right-- ){
+            let leftValue = array[left];
+            let rightValue = array[right];
+
+            let temp = rightValue;
+            rightValue = leftValue;
+            leftValue = temp;
+
+            array[left] = leftValue;
+            array[right] = rightValue;
+        }
+
+        return array;
+
+    }
+}
+
+{
+   function reverseInPlaceArray(array){
+
+    for(let left = 0, right = array.length - 1; left < right; left++, right--){
+        let leftValue = array[left];
+        let rightValue = array[right];
+
+        [leftValue, rightValue] = [rightValue, leftValue];
+
+        array[left] = leftValue;
+        array[right] = rightValue;
+    }
+
+    return array;
+
+   }
+}
+
+{
+    function reverseArrayInPlace(array){
+
+        for(let left = 0, right = array.length - 1; left < right; left++, right--){
+            [array[left], array[right]] = [array[right], array[left]];
+        }
+
+        return array;
+    }
+
+    console.log(reverseArrayInPlace([3, 5, 6, 7, 3, 4]));
+}
+
