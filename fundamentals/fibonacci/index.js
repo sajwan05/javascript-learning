@@ -34,3 +34,38 @@
 
     console.log(fibonacciSequence(10));
 }
+
+// get the nth fibonacci element
+
+{
+    function fibonacci(number){
+        let num;
+        if(typeof number !== "number"){
+            num = parseInt(number);
+        }else {
+            num = number;
+        }
+
+        if(num < 0) return "OOPS";
+        if(num === 0) return 0;
+
+        if(num === 1 || num === 2) return 1;
+        let previous = 1; 
+        let current = 1;
+
+        let next;
+
+        for(let i = 2; i < num; i++){
+            
+            next = previous + current;
+            previous = current;
+            current = next;
+        }
+
+        return next;
+    }
+
+    console.log(fibonacci(10));
+    console.log(fibonacci(3));
+    console.log(fibonacci(15));
+}
