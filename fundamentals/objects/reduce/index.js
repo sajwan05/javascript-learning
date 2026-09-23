@@ -106,3 +106,43 @@ console.log(countOfFruits);
 
     console.log(productsPrice);
 }
+
+// Level 3 : 
+/*
+    {
+  Delhi: [
+    { name: "A", city: "Delhi" },
+    { name: "C", city: "Delhi" },
+    { name: "D", city: "Delhi" }
+  ],
+  Mumbai: [
+    { name: "B", city: "Mumbai" },
+    { name: "E", city: "Mumbai" }
+  ]
+}
+*/
+
+{
+    const users = [
+        { name: "A", city: "Delhi" },
+        { name: "B", city: "Mumbai" },
+        { name: "C", city: "Delhi" },
+        { name: "D", city: "Delhi" },
+        { name: "E", city: "Mumbai" }
+    ];
+
+    const groupByCity = users.reduce((acc, user) => {
+        if(!acc[user.city]){
+            acc[user.city] = [];
+        }
+
+        acc[user.city].push(user);
+
+        return acc;
+    }, {});
+
+    console.log(groupByCity);
+
+}
+
+
