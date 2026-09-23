@@ -40,3 +40,45 @@ console.log(countOfFruits);
 
     console.log(result);
 }
+
+// Level 1
+// Use reduce to produce ["A", "B", "C"]
+{
+    const users = [
+        { name: "A", age: 20 },
+        { name: "B", age: 25 },
+        { name: "C", age: 20 }
+    ];
+
+    const arrayOfNames = users.reduce((obj, user) => {
+        obj.push(user["name"]);
+        return obj;
+    }, []);
+
+    console.log(arrayOfNames);
+}
+
+// Level2: 
+// produe 
+
+/*
+    {
+        1: "A",
+        2: "B",
+        3: "C"
+    }
+*/
+{
+    const users = [
+        { id: 1, name: "A" },
+        { id: 2, name: "B" },
+        { id: 3, name: "C" }
+    ];
+
+    const result = users.reduce((obj, user) => {
+        obj[user.id] = user.name;
+        return obj;
+    }, {});
+
+    console.log(result);
+}
