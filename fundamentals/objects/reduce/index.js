@@ -285,3 +285,22 @@ console.log(countOfFruits);
     }, {});
 }
 
+
+{
+    let users = [
+        {id: 'john', name: "John Smith", age: 20},
+        {id: 'ann', name: "Ann Smith", age: 24},
+        {id: 'pete', name: "Pete Peterson", age: 31},
+    ];
+
+    let usersById = users.reduce((acc, user) => {
+        if(!acc[user.id]){
+            acc[user.id] = {};
+        }
+
+        acc[user.id] = user;
+        return acc;
+    }, {});
+
+    console.log(usersById);
+}
