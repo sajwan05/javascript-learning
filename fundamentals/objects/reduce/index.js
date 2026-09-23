@@ -19,3 +19,24 @@ const countOfFruits = fruits.reduce((obj, value) => {
 
 console.log(countOfFruits);
 
+
+{
+    const users = [
+        { name: "A", age: 20, city: "Delhi" },
+        { name: "B", age: 25, city: "Mumbai" },
+        { name: "C", age: 20, city: "Delhi" },
+    ];
+
+    console.log(users);
+
+    const result = users.reduce((obj, value) => {
+        if(!obj[value["city"]]){
+            obj[value.city] = [];
+        }
+
+        obj[value["city"]].push(value);
+        return obj;
+    }, {});
+
+    console.log(result);
+}
