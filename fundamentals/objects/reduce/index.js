@@ -294,9 +294,6 @@ console.log(countOfFruits);
     ];
 
     let usersById = users.reduce((acc, user) => {
-        if(!acc[user.id]){
-            acc[user.id] = {};
-        }
 
         acc[user.id] = user;
         return acc;
