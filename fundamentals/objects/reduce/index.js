@@ -188,3 +188,100 @@ console.log(countOfFruits);
     console.log(numberOfFruits);
 }
 
+// Level 4:
+
+/*
+    {
+    A: 7,
+    B: 5
+}
+*/ 
+
+{
+    const orders = [
+        { customer: "A", product: "apple", quantity: 2 },
+        { customer: "B", product: "banana", quantity: 3 },
+        { customer: "A", product: "orange", quantity: 4 },
+        { customer: "B", product: "banana", quantity: 2 },
+        { customer: "A", product: "apple", quantity: 1 }
+    ];
+
+    const totalByEachUser = orders.reduce((acc, user) => {
+        if(!acc[user.customer]){
+            acc[user.customer] = 0;
+        }
+
+        acc[user.customer] += user.quantity;
+
+        return acc;
+    }, {});
+
+    console.log(totalByEachUser);
+
+}
+
+// Level 4.5
+
+/*
+    {
+        A: {
+            apple: 3,
+            orange: 4
+        },
+        B: {
+            banana: 5
+        }
+    }
+*/ 
+
+{
+    const orders = [
+        { customer: "A", product: "apple", quantity: 2 },
+        { customer: "B", product: "banana", quantity: 3 },
+        { customer: "A", product: "orange", quantity: 4 },
+        { customer: "B", product: "banana", quantity: 2 },
+        { customer: "A", product: "apple", quantity: 1 }
+    ];
+
+    const result = orders.reduce((acc, order) => {
+        if(!acc[order.customer]){
+            acc[order.customer] = {};
+            acc[order.customer][order.product] = order.quantity;
+        }else if(!acc[order.customer][order.product]) {
+            acc[order.customer][order.product] = order.quantity;
+        }else {
+            acc[order.customer][order.product] += order.quantity;
+        }
+        
+        
+
+        return acc;
+    }, {});
+
+    console.log(result);
+}
+
+{
+    const orders = [
+        { customer: "A", product: "apple", quantity: 2 },
+        { customer: "B", product: "banana", quantity: 3 },
+        { customer: "A", product: "orange", quantity: 4 },
+        { customer: "B", product: "banana", quantity: 2 },
+        { customer: "A", product: "apple", quantity: 1 }
+    ];
+
+    const result = orders.reduce((acc, order) => {
+        if(!acc[order.customer]){
+            acc[order.customer] = {}
+        }
+
+        if(!acc[order.customer][order.product]){
+            acc[order.customer][order.product] = 0;
+        }
+
+        acc[order.customer][order.product] += order.quantity;
+        
+        return acc;
+    }, {});
+}
+
