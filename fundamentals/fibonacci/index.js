@@ -69,3 +69,34 @@
     console.log(fibonacci(3));
     console.log(fibonacci(15));
 }
+
+{
+    function fibonacciSequence(countArg){
+
+        let count;
+        if(typeof countArg !== "number"){
+            count = parseInt(countArg);
+        }else {
+            count = countArg;
+        }
+
+        let sequence = "0 1 1";
+
+        let previous = 1;
+        let current = 1;
+
+        let next;
+        for(let i = 2; i < count; i++){
+            next = previous + current;
+
+            previous = current;
+            current = next;
+
+            sequence += ` ${next}`;
+        }
+
+        return sequence;
+    }
+
+    console.log(fibonacciSequence(11));
+}
