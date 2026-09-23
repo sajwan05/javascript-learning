@@ -82,3 +82,27 @@ console.log(countOfFruits);
 
     console.log(result);
 }
+
+// Level 2.5 
+/*
+{
+  Laptop: 50000,
+  Mouse: 1000,
+  Keyboard: 2000
+}
+*/
+
+{
+    const products = [
+        { id: 101, name: "Laptop", price: 50000 },
+        { id: 102, name: "Mouse", price: 1000 },
+        { id: 103, name: "Keyboard", price: 2000 }
+    ];
+
+    const productsPrice = products.reduce((obj, product) => {
+        obj[product.name] = product.price;
+        return obj;
+    }, {});
+
+    console.log(productsPrice);
+}
