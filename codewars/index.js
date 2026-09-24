@@ -2270,3 +2270,33 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(reverseArrayInPlace([1, 4, 5, 6, 3, 5, 3]));
 }
 
+// Find missing number
+// Pseudocode:
+// first we will sort the array
+// then we will iterate through the sorted array
+//      then we will check if index is equal to value at index if not
+//      so that's our missing value and we will return it
+// otherwise return -1 if no missing value is available
+
+{
+    function findMissingValue(array){
+
+        const sortedArray = array.sort((a, b) => a - b);
+
+        for(let index = 0; index < sortedArray.length; index++){
+            if(index !== sortedArray[index]){
+                return index;
+            }
+
+        }
+
+        return sortedArray.length;
+    }
+
+    console.log(findMissingValue([3, 0, 1]));
+    console.log(findMissingValue([0, 1]));
+    console.log(findMissingValue([9, 6, 4, 2, 3, 5, 7, 0, 1]));
+    console.log(findMissingValue([0]));
+}
+
+
