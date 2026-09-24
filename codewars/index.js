@@ -2245,3 +2245,28 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(reverseArrayInPlace([3, 5, 6, 7, 3, 4]));
 }
 
+// Problem 18: Reverse array in place
+
+// Pseudocode: 
+// first we will initialize left as first element and right as last element 
+// then we will iterate through the input array until left is less than right
+//      then we will swap item at left and right index and then we will increment left and decrement right
+// after looping through all the elements and exiting loop 
+// we will return array(which will be reversed ofcourse)
+
+{
+    function reverseArrayInPlace(array){
+
+        for(let left = 0, right = array.length - 1; left < right; left++, right--){
+
+            let temp = array[left];
+            array[left] = array[right];
+            array[right] = temp;
+        }
+
+        return array;
+    }
+
+    console.log(reverseArrayInPlace([1, 4, 5, 6, 3, 5, 3]));
+}
+
