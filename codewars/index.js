@@ -2299,4 +2299,55 @@ console.log(remainingOrders(10, ["All or Nothing", "Tropical Island", "lime soda
     console.log(findMissingValue([0]));
 }
 
+// Date : 25 september 2026
+// Given an unsorted array of integers, find the length of the longest sequence of consecutive integers.
+// Pseudocode:
+// so first we will sort the input array
+// then we will set previous as 1st element of the array
+// then we will intialize currentStreak and longestStreak as 1
+// then we will iterate through the array from 2nd element
+//      and will check if previous plus one is currentItem if yes
+//          so we will increment currentStreak by 1
+//      otherwise if previous === currentItem if yes
+//          continue
+//      otherwise if previous plus one is not equal to currentItem 
+//      so we will reset currentStreak with 1 
+//  then we will check if longestStreak < currentStreak if yes
+//         we will update longestStreak with currentStreak;
+// and then will return longestStreak;
+
+{
+    function findLongestConsequitiveIntegers(array){
+        if(array.length === 0) return 0;
+
+        array.sort((a, b) => a - b);
+
+        let previous = array[0];
+        let currentStreak = 1;
+        let longestStreak = 1;
+
+        for(let i = 1; i < array.length; i++){
+            const currentItem = array[i];
+            if(previous + 1 === currentItem){
+                currentStreak++;
+            }else if (previous === currentItem){
+                continue;
+            }else {
+                currentStreak = 1;
+            }
+
+            if(currentStreak > longestStreak){
+                longestStreak = currentStreak;
+            }
+
+            previous = currentItem;
+        }
+
+        return longestStreak;
+    }
+
+    console.log(findLongestConsequitiveIntegers([100, 4, 200, 1, 3, 2]));
+    console.log(findLongestConsequitiveIntegers([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]));
+    console.log(findLongestConsequitiveIntegers([10, 5, 12, 3]));
+}
 
