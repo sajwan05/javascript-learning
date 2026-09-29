@@ -57,3 +57,54 @@ addDigit("0007");
 console.log(currentValue);
 submit();
 console.log(completedValue);
+
+// Two number inputs
+{
+    let currentValue = "";
+    let firstValue = null; 
+    let secondValue = null;
+
+    function addDigit(digit){
+        currentValue += digit;
+    }
+
+    function confirmFirst(){
+        firstValue = parseInt(currentValue);
+        currentValue = "";
+    }
+
+    function confirmSecond(){
+        secondValue = parseInt(currentValue);
+        currentValue = "";
+    }
+
+    function reset(){
+        currentValue = "";
+        firstValue = null;
+        secondValue = null;
+    }
+
+    addDigit("4");
+    addDigit("7");
+    addDigit("2");
+    confirmFirst();
+
+    console.log(currentValue);
+    console.log(firstValue);
+    console.log(secondValue);
+
+    addDigit("8");
+    addDigit("5");
+    confirmSecond();
+
+    console.log(currentValue);
+    console.log(firstValue);
+    console.log(secondValue);
+
+    reset();
+
+    console.log(currentValue);
+    console.log(firstValue);
+    console.log(secondValue);
+    
+}
