@@ -108,3 +108,69 @@ console.log(completedValue);
     console.log(secondValue);
     
 }
+
+// Problem 3: 
+{
+    let currentValue = "";
+    let firstNumber = null;
+    let secondNumber = null;
+    let operator = null;
+    let result = equalOperator("=");
+
+    function concatenateDigits(digit){
+        currentValue += digit;
+    }
+
+    function getOperator(operation){
+        firstNumber = parseInt(currentValue);
+        operator = operation;
+        currentValue = "";
+    }
+
+    function equalOperator(operation){
+        secondNumber = parseInt(currentValue);
+        currentValue = "";
+
+        let result = calculator(operator, firstNumber, secondNumber);
+
+        firstNumber = result;
+        if(operator !== "="){
+            operator = operation;
+        }else {
+            operator = null;
+        }
+
+        secondNumber = null;
+        
+        return result;
+    }
+
+    function calculator(operator, num1, num2){
+        
+        switch(operator){
+            case "+":
+                return num1 + num2;
+            case "-":
+                return num1 - num2;
+            case "x":
+                return num1 * num2;
+            case "/":
+                return num1 / num2;
+        }
+    }
+
+    concatenateDigits("4");
+    concatenateDigits("7");
+    getOperator("+");
+    concatenateDigits("8");
+    concatenateDigits("5");
+    let res = equalOperator("+");
+    concatenateDigits("4");
+    concatenateDigits("0");
+    let r = equalOperator("=");
+
+    console.log(res);
+    console.log(r);
+    console.log(firstNumber);
+    console.log(operator);
+}
